@@ -1,0 +1,632 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maxim_c</title>
+
+<script src="cssjs/jquery-3.3.1.min.js"> </script>  <!---제이쿼리-->
+<script src="cssjs/script.js"> </script>  <!--동작스크립트-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!---bx slider-->
+<script src="bxslider-4-4.2.12/bxslider-4-4.2.12/src/js/jquery.bxslider.js"></script>
+<link href="bxslider-4-4.2.12/bxslider-4-4.2.12/src/css/jquery.bxslider.css" type="text/css" rel="stylesheet">
+<!---아이콘 스타일-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+
+<link href="cssjs/default.css" type="text/css" rel="stylesheet">
+<link href="cssjs/layout.css" type="text/css" rel="stylesheet">
+<!--반응형 스타일-->
+<link href="cssjs/resp.css" type="text/css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+<script src="</script">http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+<![endif]-->
+ 
+<!--[if lt IE 8]>
+<script src="</script">http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
+<![endif]-->
+ 
+<!--[if lt IE 7]>
+<script src="</script">http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+
+	<div id="member">   <!--회원가입 폼-->
+     <div class="form_join">
+      <span class="close_m"> &times;</span>
+       <h2>Member</h2>
+     </div>
+    </div>
+    
+    
+    <div id="login">      <!-- 로그인 폼-->
+     <div class="form_login">
+      <span class="close_l"> &times;</span>
+      
+      <div class="t_header">
+       <i class="material-icons" style="font-size:36px">lock_outline</i>
+       <h2>Login</h2>
+      </div>
+      
+      <div class="loginform">
+       <form action="ok.php"method="post">
+       
+        <label title="id">
+        <i class="material-icons" style="font-size:24px">account_circle</i>
+         <input type="text" placeholder="username">
+        </label>
+        
+        <label title="pw">
+        <i class="material-icons" style="font-size:24px">lock_open</i>
+         <input type="password" placeholder="******">
+        </label>
+        
+        <input type="checkbox">
+        <span>Remember me</span>
+        <span class="forget">Forgot Password?</span>
+        
+        <input type="submit" value="SIGN IN">
+        
+       </form>
+       
+       <div class="sns_login">
+        <a class="fa fa-twitter-square" style="font-size:24px; color:#96C"></a>
+        <a class="fa fa-instagram" style="font-size:24px; color:#96C"></a>
+        <a class="fa fa-facebook-square" style="font-size:24px; color:#96C"></a>
+        <p>Or you can Login with one of the following</p>
+       </div>
+       
+      </div>
+       
+     </div>
+    </div>
+   
+    
+    
+    <div class="widgets">
+     <div class="form_wid">   <!--ebook-->
+      <span class="close_w"> &times;</span>
+       <h2>EBOOK</h2>
+     </div>
+    </div>
+
+	<header>
+    	<div class="banner"><img src="images/ba4.jpg" alt="심플라떼 배너"> <span class="close"> X오늘하루뜨지않기 </span> </div>
+        
+        <div class="smenu">
+        	
+                        <a href="#" class="join">로그인</a>
+                        <a href="#" class="login">회원가입</a>
+                        <a href="#" class="ebook">고객의 소리</a>
+                        <a href="#">Language</a>
+                        <div class="lang"> 
+                                    <a href="#">영어</a>
+                                    <a href="#">중국어</a>
+                                    <a href="#">일본어</a>
+                        </div>
+        </div>
+        <h1 class="logo" onClick="location.href='index.html'" style="cursor:pointer;">
+          <img src="images/logo.png"  alt="맥심 로고">
+        </h1> 
+        <!---가로960px-->
+            <div class="m_nav">&equiv;</div><!---모바일메뉴-->
+            <div class="nav"> 
+            	  <a href="#"> 모카골드 </a>
+                <a href="#"> 심플라떼 </a>
+                <a href="#"> 모카골드 라이트 </a>
+                <a href="#"> 카누 </a>
+                <a href="#"> TOP</a>
+            </div>
+        <nav> 
+         <div class="inner_nav">
+          <ul class="col-2 clo">
+            <h3>모카골드</h3>
+            <li><a href="#">오리지날           </a></li>
+            <li><a href="#">모카골드 마일드       </a></li>
+            <li><a href="#">화이트골드         </a></li>
+            <li><a href="#">맥심 디카페인 커피믹스</a></li>
+            <li><a href="#">맥심 아이스        </a></li>
+            <li><a href="#">맥심 아이스 화이트   </a></li>
+            <li><a href="#">맥심 아이스 블랙     </a></li>
+          </ul>
+          <ul class="col-2 clo">
+            <h3>심플라떼</h3>
+            <li>설탕을 빼고<br>고소함을 남기다.</li>
+            <li><a href="#">아이유의 심플라떼 CF보러가기!</a></li>
+          </ul>
+          <ul class="col-2 clo">
+            <h3>모카골드라이트</h3>  
+            <li>윰블리의 커피는?</li>
+            <li>지금 보러가기</li> 
+          </ul>
+          <ul class="col-3 clo">
+            <h3>카누</h3>
+            <li><a href="#">아이스블렌드 아메리카노     </a></li>
+            <li><a href="#">다크 로스트 아메리카노     </a></li>
+            <li><a href="#">스위트 아메리카노         </a></li>
+            <li><a href="#">디카페인               </a></li>
+            <li><a href="#">라떼                  </a></li>
+            <li><a href="#">아이스 라떼             </a></li>
+          </ul>
+          <ul class="col-3 clo">
+            <h3>TOP</h3>
+            <li><a href="#">마스터 라떼</a></li>
+            <li><a href="#">스위트 아메리카노</a></li>
+            <li><a href="#">더 블랙</a></li>
+            <li><a href="#">초콜렛 모카</a></li>
+            <li><a href="#">콜드브루(아메리카노/스위트)</a></li>
+            <li><a href="#">심플리 스무스(블랙/라떼/스위트)</a></li>
+            <li><a href="#">TOP CUP(마일드라떼/볼드라떼/트루블랙)</a></li>
+          </ul>
+         </div>
+           <img src="images/pat_13.png" alt="커피스틱패턴">
+        </nav>
+
+
+<script type="text/javascript">
+  mw = $(window).width()
+   if (mw<760) {
+    $("nav").slideUp()
+   }
+</script>
+    </header>
+<div id="container">   
+    <div class="sld"> 
+      <div class="page_a">
+        <ul class="gallery">
+          <li><img src="images/bg_1.jpg" width="100%" alt="메인배너"></li>
+          <li><img src="images/2.png" width="100%" alt="원두가방">  </li>
+          <li><img src="images/re_3.png" width="100%" alt=" 커피잔 ">   </li>
+          <li><img src="images/4.png" width="100%" alt="원두">  </li>
+          <li><img src="images/re_1.png" width="100%" alt="커피포트"></li>
+          <li><img src="images/re_2.png" width="100%" alt="꽃"> </li>
+          <li><img src="images/7.png" width="100%" alt="커플"></li>
+          <li><img src="images/opa_30.png" width="100%" alt="text"></li>
+        </ul>
+        <div class="gallery_r">
+          <img src="images/main.jpg" width="100%" alt="메인배너">
+        </div>
+      </div>
+<script>
+ $(function(){
+   $(".gallery li:first-child").css("opacity","1");
+   $(".gallery li").each(function(n) {
+    a = Math.ceil(Math.random()*10)  //ceil 은 소수점 올림, 1~10 난수발생
+     $(".gallery li").eq(n).delay(230*a).animate({opacity:1})
+    }); 
+   })
+</script>
+
+
+
+<!--
+     <div class="slider">
+     
+      <div class="photo_a">
+
+       <div class="intro">
+        <img src="images/spring_4_2.jpg" alt="배너2번">
+        <div class="inner">
+          
+        <h2><span>봄 시즌 한정판</span></h2>
+       </div>
+       </div>
+      </div>
+      
+      <div class="photo">
+        <div class="intro">
+          <img src="images/ba2.jpg" alt="배너1번">
+          <h2><span>White Gold </span></h2>
+        </div>
+     </div>
+
+      <div>
+        <div class="intro">
+          <img src="images/ba2.jpg" alt="배너2번">
+          <h2>TOP </span></h2>
+        </div>
+      </div>
+      
+     </div>
+-->    
+    </div>
+<div data-sticky_column="" class="obj03 is_stuck" style="position: fixed; right: -2%; top: 20px; width: 250px;">
+  <img src="images/yum_fx.png"><p><a href="#">라이트</a> </p></div>
+
+ <!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ 
+    <div class="container"> 
+      <ul class="mini_ba">
+        <li class="yum">
+          <div class="slider">
+            <div><span>봄 시즌 한/정/판</span><p>'스프링 블렌드'출시</p>
+            	<img src="images/spring_5.jpg" alt="카누드링크이미지">
+            </div>
+            <div><img src="images/wha_3.jpg" alt="카누드링크이미지"></div>
+            <div><img src="images/cold_2.jpg" alt="카누드링크이미지"></div>
+          </div>
+        </li>
+        <li class="overflow spring">
+          <img class="size" src="images/simple_ban2.jpg" alt="심플라떼배너">
+        </li>
+        <li class="overflow drink">
+          <img class="size" src="images/light_1.jpg" alt="정유미미니배너">
+        </li>
+      </ul>
+</div>
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->   
+  <div class="container"> 
+      <ul class="mini_ba">
+        <li class="yum">
+          <div class="slider">
+            <div>
+              <span>봄 시즌 한/정/판</span>
+              <p>'스프링 블렌드' 출시</p>
+              <img src="images/spring_right.jpg" alt="카누드링크이미지">
+            </div>
+            <div><img src="images/wha_3.jpg" alt="카누드링크이미지"></div>
+            <div><img src="images/cold_2.jpg" alt="카누드링크이미지"></div>
+          </div>
+        </li>
+        <li class="overflow spring">
+          <img class="size" src="images/simple_ban2.jpg" alt="심플라떼배너">
+        </li>
+        <li class="overflow drink">
+          <img class="size" src="images/light_1.jpg" alt="정유미미니배너">
+        </li>
+      </ul>
+</div>
+  <div class="container_2"> 
+      <ul class="mini_ba_2">
+        <li class="yum_2">
+          <!---->
+          <div class="slider">
+            <div><span>봄/시/즌/한/정/판</span><img src="images/spring_5.jpg" alt="카누드링크이미지"></div>
+            <div><img src="images/wha_3.jpg" alt="카누드링크이미지"></div>
+            <div><img src="images/cold_2.jpg" alt="카누드링크이미지"></div>
+          </div>
+        </li>
+        <li class="overflow spring_2">
+          <img class="size" src="images/simple_ban2.jpg" alt="심플라떼배너">
+        </li>
+        <li class="overflow drink_2">
+          <img class="size" src="images/light_1.jpg" alt="정유미미니배너">
+        </li>
+      </ul>
+</div>
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<script type="text/javascript">
+ $(window).scroll(function(){
+    a=$("html,body").scrollTop();
+    b=$(".container").offset().top;
+    c=$(".container").innerHeight();
+    //2페이지 상단에 박스의 1/3 더해서 스크롤이 상단에서 1/3 내려올때 작동
+    d=b+(c/3);                
+    if(a>b){
+      ani();
+      }
+    })
+//가로출력애니메이터
+   function{
+     $(".").animate({left:10+'%'},2000);
+     $(".obj03").show();
+     $("").delay(100).animate({left:-50+'%'},2000);
+     $("").delay(200).animate({left:83+'%'},2000);
+     $("").delay(100).animate({left:83+'%'},2000);
+     }
+</script>
+
+
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+
+<div class="dabang">
+      <div class="cov">
+       <video autoplay loop>
+        <source src="mocha.mp4" type="video/mp4">
+        <source src="mocha.ogg" type="video/ogg">
+       </video>
+      </div>
+</div>
+    <!--
+     
+    -->
+<div data-sticky_column="" class="obj02 is_stuck" style="position: fixed; top: 0px; width: 250px;">
+  <img src="images/iu_fx.png">
+</div>
+ 
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡNEWㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->   
+      <div class="icon_menu">
+         <h1 class="title"> OPEN!</h1>
+         <h2>2018.5.30</h2>
+         <h2><a href="#"> 자세히 보러가기</a></h2>
+         <p>&nbsp; </p>
+           <ul class="inner_3">
+            <li class="col-4">
+              <span>
+                제주도<br>
+                서귀포시<br>
+                남원읍<br>
+                태흥리<br>
+                50-3
+              </span>
+              <img src="images/spot_jeju.jpg" alt="제주다방프로모션">
+            </li>
+            <li class="col-4">
+              <span>
+                부산시<br>
+                해운대구<br>
+                청사포로<br>
+                등대앞<br>
+                노란집
+              </span>
+              <img src="images/spot_busan.jpg" alt="부산사진관프로모션"></li>
+            <li class="col-4">
+              <span>
+                서울시<br>
+                성동구<br>
+                성수동 2가<br>
+                333-93
+              </span>
+              <img src="images/spot_seoul.jpg" alt="성수동책방프로모션"></li>
+           </ul>
+      </div>
+    
+
+  <div class="bg_g">
+     <div class="cont">
+      <dl class="cont_new1" >
+        <dt>부드럽지<br>
+            아이하니?
+        </dt>
+        <dd><img src="images/new_6_sh.png" alt="모카골드 블랙이미지"></dd>
+        <dd>모카골드 블랙이 출시 12주년을 맞아 새롭게 돌아왔어요. <br>
+        더 부드러워진 블랙을 만나보세요. </dd>
+        <p>보러가기</p>
+      </dl>
+        <img class="ku" src="images/new_5.png" alt="진선규이미지">
+
+      </div>
+  </div>
+
+
+
+<script type="text/javascript">
+ $(window).scroll(function(){
+    a=$("html,body").scrollTop();
+    b=$(".inner_3").offset().top;
+    c=$(".inner_3").offset().top;
+    //2페이지 상단에 박스의 1/3 더해서 스크롤이 상단에서 1/3 내려올때 작동
+    d=b+(c/3);                
+    if(a>b){
+      ani();
+      }
+/*----------왼쪽 아이유 배너-----------*/
+
+   if(b<a){$('.obj02').hide()}else{$('.obj02').show()}
+
+/*----------오른쪽 유미 배너-----------*/
+
+   if(a<c){$('.obj03').hide()}else{$('.obj03').show()}
+   
+
+
+
+    })
+
+//가로출력애니메이터
+   function ani(){
+     $(".cont_new1").animate({left:10+'%'},2500);
+     $(".ku").animate({right:-30+'%'},2500);
+    
+
+
+     $("").delay(100).animate({left:-50+'%'},2000);
+     $("").delay(200).animate({left:83+'%'},2000);
+     $("").delay(100).animate({left:83+'%'},2000);
+     }
+</script>
+
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡNEWㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+
+
+
+     <div class="menu_list">
+      <p><img src="images/bg_foot.jpg" alt="맥심배경화면"></p>
+      <div class="inner_li">
+      <h1 class="title"><span></span></h1>
+
+       <ul class="cf_text">
+         <li class="text_a">NO.1</li>
+         <li class="text_b">따뜻한 이야기와 삶의 향기가 담겨있는 TV속 CF</li>
+         <li class="text_c">언제 어디서나 항상 곁에 있는,<br> 내 입맛에 딱 맞는 우리나라 대표커피 맥심.</li>
+         <li class="text_d">보러가기</li>
+       </ul>
+       <img src="images/pic_2.png" alt="cf사진">
+      </div>
+     
+     
+     <div class="mark"><img src="images/don.png"  alt="맥심 로고"></div>
+    </div>
+ 
+
+<script type="text/javascript">
+ 
+ $(window).scroll(function(){
+    a=$("html,body").scrollTop();
+    b=$(".bg_g").offset().top;
+    c=$(".bg_g").offset().top;
+   
+    //2페이지 상단에 박스의 1/3 더해서 스크롤이 상단에서 1/3 내려올때 작동
+    d=b+(c/3);                
+    if(a>b){
+      tex();
+      }
+
+    })
+
+//가로출력애니메이터
+   function tex(){
+     $(".text_a").animate({left:3+'%'},2100);
+     $(".text_b").animate({left:3+'%'},2500);
+     $(".text_c").animate({left:3+'%'},2500);
+     $(".text_d").animate({left:3+'%'},3000);
+
+     
+    
+     $("").delay(100).animate({left:-50+'%'},2000);
+     $("").delay(200).animate({left:83+'%'},2000);
+     $("").delay(100).animate({left:83+'%'},2000);
+     }
+</script>
+
+
+
+</div>
+
+<!--
+<div class="ex">
+ <div class="inner_ex">
+  <ul>
+    <li class="but_1">1</li>
+    <li class="but_2">2</li>
+    <li class="but_3">3</li>
+  </ul>
+
+  <div class="ex_1">1</div>
+  <div class="ex_2">2</div>
+  <div class="ex_3">3</div>
+  </div>
+</div>
+
+<ul>
+        <li><figure>
+          <video controls>
+            <source src="cf_iu.mp4" type="video/mp4">
+            <source src="cf_iu.ogg" type="video/ogg">
+          </video>
+          <figcaption>이미지설명</figcaption></figure></li>
+       
+        <li><figure>
+          <video controls>
+            <source src="cf_kanu.mp4" type="video/mp4">
+            <source src="cf_kanu.ogg" type="video/ogg">
+          </video>
+          <figcaption>이미지설명</figcaption></figure></li>
+
+        <li><figure>
+          <video controls>
+              <source src="cf_light.mp4" type="video/mp4">
+              <source src="cf_light.ogg" type="video/ogg">
+            </video>
+          <figcaption>이미지설명</figcaption></figure></li>
+        
+       </ul>
+
+ <script>
+ 
+$(document).ready(function(){
+    $(".but_1").hover(function(){
+        $(".ex_1").slideToggle("slow");
+    });
+});
+
+$(document).ready(function(){
+    $(".but_2").hover(function(){
+        $(".ex_2").slideToggle("slow");
+    });
+});
+
+$(document).ready(function(){
+    $(".but_3").hover(function(){
+        $(".ex_3").slideToggle("slow");
+    });
+});
+
+
+
+</script>
+
+      
+      $(".fin").animate({opacity:0})
+$(".ex_1").delay(1500).fadeIn(2000)
+    
+-->
+
+
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+    <footer>
+     
+     <!--<div class="down">
+      <p>Have some questions about our work? <span class="ebook">Download</span> </p>
+     
+     </div>-->
+     
+     <div class="adress">
+      <div class="inner">
+       <div class="f_box">
+        <ul>
+         <li>브랜드 사이트</li>
+         <li>패밀리 사이트</li>
+         <li>커뮤니티</li>
+        </ul>
+       </div>
+       
+       <div class="f_box">
+        <ul>
+         <li>@Dongsuh</li>
+         <li>
+          <a class="tw"><i class="fa fa-twitter-square" style="font-size:24px"></i></a>
+          <a class="in"><i class="fa fa-instagram" style="font-size:24px"></i></a>
+          <a class="fa"><i class="fa fa-facebook-square" style="font-size:24px"></i></a>
+          <a class="ka"><i class="fa fa-youtube-play" style="font-size:24px"></i></a>
+         </li>
+         <li onClick="location.href='mailto:elrohim@gmail.com'"style="cursor:pointer;   
+          text-transform:none; font-size:1.2vw;">   
+          서울시 마포구 독막로 324(도화동, 동서빌딩)</li>
+        </ul>
+       </div>
+       
+       <div class="f_box">
+        <ul>
+         <li>대표전화</li>
+         <li>1588-2233</li>
+       
+        </ul>
+       </div>
+       
+      </div>
+     </div>
+     
+     <div class="copyright">
+      <span>Copyright 2017 &copy; Dongsuh Foods Corporation. All rights reserved.</span>
+     </div>
+     
+     
+    
+    </footer>
+    
+    <!---modal-->
+    <div class="sns"> </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

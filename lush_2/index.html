@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+  <title>LUSH_G</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&display=swap&subset=korean" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="ui/jquery-ui.min.js"> </script>
+
+
+
+<style type="text/css">
+
+
+
+	
+*{margin:0; padding:0;  font-family: 'ArtBrush','Gothic'; list-style: none;}
+html, body{ width:100%; height:100%; line-height: 34px; font-weight: 600;}
+
+#page1{width: 100%; height: 100%; position: relative;  background-color: #fff;}
+.yellow{overflow: hidden;}
+.yellow img{animation: bg linear infinite 30s; width: 100%;}
+.rocket{position: absolute; transform: translate(-50%,-50%); left: 47%; top: 40%; text-align: center;}
+.slo{position: absolute; transform: translate(-50%,-50%); left: 47%; top: 20%; text-align: center; font-size: 2.5vw;}
+.logo{width: 10%; position: absolute; right: 45px; top: 60px;}
+ 
+
+
+ @keyframes bg{
+ 0%{transform: scale(1);}
+ 50%{transform: scale(1.2);}
+ 100%{transform: scale(1);}
+ }
+
+
+
+/*--------------------------로켓애니메이션-----------------------------------*/
+
+.rocket img{animation:bn linear 2s 0.5s infinite;}
+ @keyframes bn{
+	 0%{ transform:translateY(0px);}
+	 50%{ transform:translateY(-50px);}
+	 100%{ transform: translateY(0px);}
+	 }
+
+
+
+/*----------------------------------------------------------------------------*/
+
+#page2{position: relative; width: 100%; height: 100%; background: #ece2e2; overflow: hidden;}
+.lemon{width: 20%; position: absolute; left: -50px;z-index: 99; left: -100%;}
+.lemon img{width: 100%;}
+
+.lemon_2{width: 20%; position: absolute; top: 2%; left: -60px; left: -100%;}
+.lemon_2 img{width: 100%;}
+
+.content{position: relative; text-align: center; top: 45%; font-size: 1.5vw;
+  }
+
+
+	/*position: absolute; top: 45%; left: 50%; margin-left: -350px border: 1px solid black;}
+.content{ text-align: center;}*/
+
+.bergamot{width: 20%; position: absolute; top: 60%; z-index: 99; left: 100%;}
+.bergamot img{width: 100%; }
+
+.bergamot_2{width: 19%; position: absolute; top: 63%; left: 100%;z-index: 80;}
+.bergamot_2 img{width: 100%; }
+
+/*----------------------------------------------------------------------------*/
+#page3{ width:100%; height:100%; position: relative;}
+.tub{width: 100%; height:100%; position: absolute;}
+.exp_box{width: 100%; position: fixed; top: -250px; z-index: -9;}
+.exp{position: absolute; top: 5%; width: 50%;}
+.lug{ z-index: 999; right: 0; position: absolute;}
+.lug_sh{ z-index: 99; right: 0; position: absolute; top: 2%;}
+.ori{ z-index: 999;position: absolute; left: 45%; }
+.ori_sh{ z-index: 990;position: absolute; left: 49%; margin-top:30px; }
+
+
+
+/*---------------------------------44444-------------------------------------------*/
+
+#page4{width:100%; height:100%; position: relative;  background-color: #fff; }
+.box2{width: 100%; height:100%; position: absolute;}
+#page4 video{ width: 100%; position: absolute; right: 0;}
+.title{position: absolute; top: 50%; left: 70%; margin: -100px 0 0 -250px;
+       font-size: 1.4vw; text-align: center; z-index: 999; color: #333;}
+
+ 
+/*----------------------------------------------------------------------------*/
+#page5{width:100%; height:100%; position: relative;   background: #ece2e2;}
+.inner_5{width: 100%; display: none;}
+
+.bomb{font-size: 3vw; text-align: center; padding: 30px 0;}
+.uni{width: 100%; position: absolute;}
+.wave1{width: 2%; position: absolute; z-index: 9999;  left: 50%; margin-left: -53px; top: 71%; }
+.wave2{width: 2%; position: absolute; z-index: 9999;  left: 50%; margin-left: -103px; top: 70%; }
+.wave5{width: 2%; position: absolute; z-index: 9995;  left: 50%; margin-left: -100px; top: 70%; }
+
+.wave3{width: 2%; position: absolute; z-index: 9999;  left: 50%; margin-left: -13px; top: 69%; }
+.wave4{width: 2%; position: absolute; z-index: 9995;  left: 50%; margin-left: -11px; top: 69%; }
+
+
+.man{width: 9%; position: absolute; z-index: 999; left: 25%; top: 35%; }
+.moon{width: 9%; animation:moon linear infinite 2s; position: absolute; z-index: 999; left: 15%; bottom: 10%;}
+.hand{width: 23%; position: absolute; z-index: 999; left: 50%; margin-left: -210px; bottom:15%;}
+.fin{font-size: 1.5vw; position: absolute; z-index: 999; left: 70%; margin-left: -340px; top: 35%; text-shadow: 10px;}
+
+.rainbow1{animation:moon linear infinite 2s; position: absolute; z-index: 999; left: 70%; top: 30%; width: 10%;}
+.pen{width: 10%; position: absolute; z-index: 999; left: 80%; top: 80%;}
+.more_b{position: absolute; font-size: 1vw;color: #ece2e2; z-index: 99999; left: 15%; top: 20%; line-height: 27px;}
+.more{position: absolute; font-size: 1vw; z-index: 99999; left: 15%; top: 32%; border: 2px solid #ece2e2; padding: 10px;}
+.more a{text-decoration: none; color: #e49a8f;}
+
+.ro_3{width: 10%; position: absolute; z-index: 99999; left: 50%; margin-left: -100px; top: 40%; }
+
+
+
+
+/*--------------------------로켓애니메이션-----------------------------------*/
+
+ @keyframes moon{
+  0%{transform: rotate(15deg); transform-origin: center;}
+  50%{transform: rotate(0deg); transform-origin: center;}
+  100%{transform: rotate(15deg); transform-origin: center;}
+ }
+
+
+
+
+.wave1, .wave2, .wave3{animation:an linear 2s 0.5s infinite;}
+ @keyframes an{
+   0%{ transform:translateX(-8px);}
+   50%{ transform:translateX(8px);}
+   100%{ transform: translateX(-8px);}
+   }
+
+
+
+.man{animation:bn linear 2s 0.5s infinite;}
+ @keyframes bn{
+   0%{ transform:translateY(0px);}
+   50%{ transform:translateY(-50px);}
+   100%{ transform: translateY(0px);}
+   }
+
+.pen{animation:bn linear 2.5s 0.5s infinite;}
+ @keyframes bn{
+   0%{ transform:translateY(0px);}
+   50%{ transform:translateY(-50px);}
+   100%{ transform: translateY(0px);}
+   }
+
+
+.won:before{ animation:zoom linear 1s infinite;content:''; width:20px; height:20px; background-color:#fff; display: block; border-radius:50%; position:absolute;left: 20%; margin-left: -150px; top: 20%;}
+
+.won:after{ animation:zoom linear 1s 0.3s infinite;content:''; width:20px; height:20px; background-color:#fff; display: block; border-radius:50%; position:absolute;left: 20%; margin-left: -150px; top: 20%;}
+ 
+ @keyframes zoom{
+   0%{ transform:scale(0);opacity:0.5;}
+   100%{ transform:scale(1); opacity:0;}
+   
+   }
+
+/*----------------------------------------------------------------------------*/
+#page6{width:100%; height:100%; position: relative;  background-color: #fff; overflow: hidden;}
+
+.box6{width: 15%; position: absolute; top:20%; z-index: 999; left: 100%; }
+.box7{width: 30%; position: absolute;top:20%; z-index: 99; left: 30%; display: none;}
+.box8{border: 1px solid #ccc; width: 200px; height: 200px; position: absolute;left: 70%; top: 50%;}
+.fresh{ width: 100%; position: absolute; opacity: 0.8;}
+
+/*--------------------------------------77777777777------------------------------------*/
+
+#page7{padding:20px 0 50px;width:100%; height:100%; position: relative;  background-color: #fff;}
+
+.slide_bg{
+  background-color: #333;
+  color: #fff;
+}
+
+.slide_bg p{
+  padding:110px 30px;
+  width: 62%;
+  margin: 50px auto;
+  border: 1px solid #fff;
+}
+
+
+.frame_box{position: relative; top: 4%; margin: 0 auto; width: 75%; }
+.frame2{width:100%;height: 598px; position: relative; border: solid 1px #ccc; overflow:hidden; }
+  
+  .frame2 .left{ width:50%; left:0; position:absolute;}
+  .frame2 .right{ bottom:0; width:50%; right:0; position:absolute;}
+  .frame2 .imgbox{width:100%; height:600px; border:solid 1px #000066; background-size:cover;}
+  
+  .btn{width:30px;text-align: center; position:absolute;top:50%;left:50%; transform:translate(-50%,-50%); z-index:10;}
+  .btn span{width:30px; border: 1px solid #000066;margin: 5px 0; height:30px; border-radius:50%; background:#333; color:#FFF; float:left; display:block;}
+
+/*-------------------------------------888888888---------------------------------------*/
+#page8{width:100%; height:100%; position: relative;   background: #f7f7f7;}
+
+.icon{position: absolute; top: 50%; width: 100%;text-align: center; top: 40%;}
+.icon img{width: 10%;}
+.foot{position: absolute; width: 100%; height: 45%; bottom: 0; background-color: black;}
+.icona{ animation:icona linear infinite 2s}
+.iconb{ animation:iconb linear infinite 2s;}
+
+.foot{color: #fff; font-size: 0.8vw;}
+
+.inner_8{width: 50%; margin: 0 auto; margin-top: 10%;}
+.company li{display: inline; padding: 0 10px;}
+.company{position: absolute; left: 42%; margin-top: 47px;}
+.foot .logo_f{ width: 100%; text-align: center; border: 1px solid #ccc;}
+.logo_f img{ position: absolute; left: 50%; margin-left: -550px;}
+.logo_f p{left: 50%; }
+
+@keyframes icona{
+  0%{transform: rotate(15deg); transform-origin: center;}
+  50%{transform: rotate(0deg); transform-origin: center;}
+  100%{transform: rotate(15deg); transform-origin: center;}
+ }
+
+@keyframes iconb{
+  0%{transform: rotate(-10deg); transform-origin: center;}
+  50%{transform: rotate(0deg); transform-origin: center;}
+  100%{transform: rotate(-10deg); transform-origin: center;}
+ }
+
+
+/*----------------------------------------------------------------------------*/
+#nav_1{width: 5%; position: fixed; height:100%; z-index: 9999; margin-left: 50px;}
+.nav{position: absolute;}
+.nav li a{text-decoration:none; text-align:center;}
+.nav li:hover{border: 1px solid #fff;}
+.nav li{margin: 60% 0; margin-top: 90%;}
+
+.way_a{ position: fixed; margin:40px 60px;  width: 30px; height: 30px;z-index: 99999; border-left:  15px solid #ccc; border-bottom: 15px solid #ccc;  transform:rotate(135deg);}
+
+.way_b{position: fixed; bottom: 0; margin:40px 13px; width: 30px; height: 30px; border-bottom: 15px solid #ccc; z-index: 999; border-left:  15px solid #ccc;  transform:rotate(-45deg);}
+
+
+/*----------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------------*/
+</style>
+
+
+</head>
+
+<body>
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ1ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+ <div  onClick="pageMov(0)" class="way_a"> </div>
+ <div id="nav_1">
+
+  <ul class="nav">
+   <li><a href="#page1" class="scroll"><img src="image/rocket2.png" width="100%"></a></li>
+   <li onClick="pageMov(0)"><a href="#page2" class="scroll"><img src="image/lemon2.png" width="100%"></a></li>
+   <li onClick="pageMov(0)"><a href="#page4" class="scroll"><img src="image/tape2.png" width="100%"></a></li>
+   <li onClick="pageMov(-20)"><a href="#page3" class="scroll"><img src="image/ori2.png" width="100%"></a></li>
+   <li onClick="pageMov(-40)"><a href="#page7" class="scroll"><img src="image/made2.png" width="100%"></a></li>
+   <li onClick="pageMov(-60)"><a href="#page6" class="scroll"><img src="image/made2.png" width="100%"></a></li>
+   <li onClick="pageMov(-80)"><a href="#page5" class="scroll"><img src="image/moon2.png" width="100%"></a></li>
+   <li onClick="pageMov(-85)"><a href="#page8" class="scroll"><img src="image/made2.png" width="100%"></a></li>
+  </ul>
+
+  <div onClick="pageMov(-80)" class="way_b"></div>
+ </div>
+
+ <div class="box" id="page1">
+ 	<div class="yellow"><img src="image/yellow_2.png" alt="배경"></div>
+ 	<div class="rocket"><img src="image/rocket.png" alt="로켓" width="30%"></div>
+ 	<div class="slo">5 . . . 4 . . . 3 . . . 2 . . . 1 . . .</div>
+ 	<div class="logo"><a href="https://www.lush.co.kr/site/main.jsp"><img src="image/logo.png" alt="로고" width="100%"></a></div>
+ </div>
+
+ <script>
+ 
+ $(function(){
+   
+   $(".scroll").click(function(e){
+     e.preventDefault();
+     $("html,body").animate({scrollTop:$(this.hash).offset().top},1000);
+
+     });
+
+
+    $(".nav li").click(function(){
+     $(this).css("border","solid 10px #5e428c")
+     $(".nav li").not(this).css("border","none")
+   })
+
+
+   });
+  
+function pageMov(a){
+
+   $(".nav").animate({top:a+"%"})
+}
+ </script>
+
+
+
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ2ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+ <div class="box" id="page2">
+ 	  <div class="lemon"><img src="image/lemon.png" width="20%"></div>
+ 	  <div class="lemon_2"><img src="image/lemon_sh.png" width="20%"></div>
+ 	  <div class="content">
+     베르가못과 싱그러운 레몬이 듬뿍 담긴<br>
+     이 알록달록한 배쓰 밤이 욕조에 황홀하게 퍼지면,<br>
+     당신이 상상해 오던 우주로 데려다줄 거예요!
+    </div>
+ 	  <div class="bergamot"><img src="image/bergamot_3.png"></div>
+ 	  <div class="bergamot_2"><img src="image/bergamot_sh.png"></div>
+ </div>
+
+<script type="text/javascript">
+ 
+ $(window).scroll(function(){
+	  a=$("html,body").scrollTop();
+	  b=$("#page1").offset().top;
+	  c=$("#page1").innerHeight();
+	  //2페이지 상단에 박스의 1/3 더해서 스크롤이 상단에서 1/3 내려올때 작동
+	  d=b+(c/3);                
+	  if(a>b){
+		  ani();
+		  }
+	  })
+//가로출력애니메이터
+   function ani(){
+	   $(".lemon").animate({left:-5+'%'},2000);
+	   $(".lemon_2").delay(100).animate({left:-5+'%'},2000);
+	   $(".bergamot").delay(200).animate({left:83+'%'},2000);
+	   $(".bergamot_2").delay(100).animate({left:83+'%'},2000);
+	   }
+</script>
+
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ4ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+ <div class="box" id="page4">
+  <div class="box2">
+    <div class="title">
+      여러분의 하루에 즐거움을 더해보세요!<br>
+      아름다운 색상과 향기가 가득한 입욕을 즐기는 것은<br> 그리 어려운 일이 아니랍니다.<br>
+       배쓰밤을 욕조 속 물에 '퐁당'떨어뜨리기만 하면 되니까요.
+    </div>
+   <video width="100%" autoplay loop>
+    <source src="rocket science.mp4" type="video/mp4">
+    <source src="rocket science.ogg" type="video/ogg">
+   </video>
+  </div>
+ </div>
+
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ3ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+ 
+ <div class="box" id="page3">
+  <img class="lug" src="image/lug.png" width="30%">
+  <img class="lug_sh" src="image/lug_sh.png" width="30%">
+  <img class="ori" src="image/ori.png" width="13%">
+  <img class="ori_sh" src="image/ori_sh.png" width="8%">
+
+  
+
+  <img class="tub" src="image/pink-tile2.png">
+  <div class="exp_box"><img class="exp" src="image/black_exp3.jpg"></div>
+  
+
+ </div>
+
+
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ777-ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<div class="box" id="page7">
+ <div class="frame_box">
+  <div class="frame2">
+    
+            <div class="btn">  <!---버튼-->
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+            </div>
+            
+            <div class="left"><!--왼쪽 박스-->
+                <div class="imgbox" bg2="image/beg.jpg">1 </div>
+                    <div class="imgbox slide_bg">
+                    <p>
+                        러쉬는 세계 곳곳을 돌아다니며</br>
+                        원료를 직접보고 테스팅 하여</br>
+                        보물 같은 원료를 찾아 냅니다.</br>
+                      </br>
+                        코스메틱 원료를 구입하는데</br>
+                        이런 방법을 도입한 것은</br>
+                        매우 창의적이죠.</br>
+                    </p> </div>
+                    <div class="imgbox" bg2="image/dol.jpg">3 </div>
+            </div>  
+            <div class="right"> <!--오른쪽 박스-->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+                <div class="imgbox slide_bg" bg2="img/1.jpg">
+                </br>
+                <p>
+                      러쉬는 공정 거래 무역을 통한</br>
+                  원료를 사용하고 있습니다.</br>
+                </br>
+                   러쉬의 고객은 비누와 샴푸바를</br>
+                   구입하는 것만으로도</br>
+                   세계중의 어딘가 생산자의 생활을</br>
+                   풍족하게 해줄 수 있는 것 입니다.</p>
+                   </div>
+                    <div class="imgbox" bg2="image/beg2.jpg">2 </div>
+                    <div class="imgbox slide_bg" bg2="image/6.jpg">
+                      <p>인간이 먹을 수 있는 가장 깨끗하고</br>
+                        신선한 과일과 채소를 사용하고</br>
+                        최상의 에센셜 오일만을 고집하여</br>
+                        </br>
+                        가장 자연에 가까우면서 인간에게 도움을</br>
+                        줄 수 있는 제품을 만드는 것이</br>
+                        러쉬의 신념입니다.</div>
+                      
+                      
+                      </p>
+            </div>
+      </div>
+     </div>
+    </div>
+    <script>
+        $(function(){   
+        
+               //  이미지 할당
+              $(".frame2 .imgbox").each(function(n) {  
+                a = $(this).attr("bg2")
+
+                $(this).css("background-image","url("+a+")")
+              });
+              
+              // 반대방향 스크롤
+              $(".frame2 span").each(function(n) {          
+                  $(".frame2 .btn span").eq(n).click(function(){
+
+                    $(".left").stop().animate({top: '-602'*n},1500,'easeInOutBack')
+                    $(".right").stop().animate({bottom: '-602'*n},1500,'easeInOutBack')
+                  })
+              });
+          })
+  </script>
+
+<!--<p>인간이 먹을 수 있는 가장 깨끗하고 신선한 과일과 채소를 사용하고 최상의 에센셜 오일만을 고집하여 가장 자연에 가까우면서 인간에게 도움을 줄 수 있는 제품을 만드는 것이 러쉬의 신념입니다.</p>
+  <p>러쉬는 세계 곳곳을 돌아다니며 원료를 직접보고 테스팅 하여 보물 같은 원료를 찾아 냅니다. 현지에서 직접 막 생산한 것들을 볼 수 있기 때문에 그 자리에서 신선하고 러쉬 제품으로 알맞다고 생각되는 재료를 구입합니다. 코스메틱 원료를 구입하는데 이런 방법을 도입한 것은 매우 창의적이죠.</p>
+  <p>러쉬는 공정 거래 무역을 통한 원료를 사용하고 있습니다. 러쉬의 고객은 비누와 샴푸바를 구입하는 것만으로도 세계중의 어딘가 생산자의 생활을 풍족하게 해줄 수 있는 것 입니다.</p>
+</div>-->
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ666666ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+ <div class="box" id="page6">
+  
+  <!--
+  
+  -->
+   <video class="fresh" width="100%" autoplay loop>
+    <source src="fresh.mp4" type="video/mp4">
+    <source src="fresh.ogg" type="video/ogg">
+   </video>
+
+
+
+
+ </div>
+
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ55555ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+
+
+ <div class="box" id="page5">
+  <div class="bomb">LUSH BATH BOMB ROCKET SCIENCE</div>
+   
+   <img class="wave1" src="image/wave6.png">
+   <img class="wave2" src="image/wave7.png">
+   <img class="wave5" src="image/wave7_1.png">
+
+   <img class="wave3" src="image/wave5.png">
+   <img class="wave4" src="image/wave5_1.png">
+
+   <img class="ro_3" src="image/rocket.png">
+   <img class="hand" src="image/hand2.png">
+   <p class="fin">click</p>
+  
+  <div class="inner_5">
+    
+   <p class="more_b">
+    손 안에 퍼지는 우주를 느끼셨나요?<br>
+    LUSH 에는 다양한 테마의 제품들이 당신을 기다리고 있어요.<br>
+    다른 제품들이 궁금하다면?<br>
+    
+   </p>
+   <p class="more"><a href="https://www.lush.co.kr/site/main.jsp">Follow me!</a></p>
+   <img class="uni" src="image/back_uni.jpg">
+   
+   <a href="https://www.lush.co.kr/site/shop/product/list.jsp?cat2_cd=8"><img class="man" src="image/man.png"></a>
+   <a href="https://www.lush.co.kr/site/shop/product/list.jsp?cat2_cd=8"><img class="moon" src="image/moon.png"></a>
+   
+   <a href="https://www.lush.co.kr/site/shop/product/view.jsp?cat2_cd=9&cat3_cd=0&pdt_cd=P0210"><img class="rainbow1" src="image/rainbow.png"></a>
+   <img class="pen" src="image/pen.png">
+   <div class="won"></div>  
+  </div>
+ </div>
+
+
+ <script>
+ 
+  $(function(){
+
+    $(".ro_3").offset().top
+
+    $(".ro_3").click(function(){
+      $(".inner_5").delay(1500).fadeIn(2000)
+      
+      $(".ro_3").animate({top:670, opacity:0},3000)
+      $(".fin").animate({opacity:0})
+    })
+  })
+
+</script>
+
+
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ88888ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+
+<div class="box" id="page8">
+  <div class="icon">
+    <img class="icona" src="image/fighting.png" alt="logo">
+    <img class="iconb" src="image/freshest.png" alt="logo">
+    <img class="icona" src="image/05.png" alt="logo">
+    <img class="icona" src="image/vegetarian.png" alt="logo">
+    <img class="iconb" src="image/handmade.png" alt="logo">
+    <img class="icona" src="image/naked.png" alt="logo">
+  </div>
+
+  <div class="foot">
+    <div class="logo_f">
+     <img src="image/logo2.png" alt="logo" width="20%">
+     <ul class="company">
+        <li>회사소개</li>
+        <li>개인정보처리방침</li>
+        <li>이용약관</li>
+        <li>이메일무단수집거부</li>
+        <li>판매약관</li>
+        <li>고객센터</li>
+        <li>매장찾기</li>
+      </ul>
+    </div>
+
+    <div class="inner_8">
+      
+      <p>구매안전 서비스가입확인</p>
+      
+
+      <p>사이트 운영자:(주)러쉬코리아 / 대표이사 우미령
+      서울시 서초구 서초동 1321-6 서초동아타워 6층
+      사업자등록번호:201-81-77964 / 통신판매업신고번호 :2012-서울서초-0647 / 개인정보보호책임자 : 우승용
+      고객센터:1644-2357(운영시간10:00~18:00, 점심시간 :11:50:13:00)/FAX:02-795-7516 /       문의메일:webmaster@lush.co.kr
+      
+      Copyright LUSHKOREA co.,Ltd. All rights reserved.</p>
+      </div>
+
+  </div>
+
+</div>
+
+
+
+	
+</body>
+</html>
+
+

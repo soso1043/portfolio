@@ -1,0 +1,127 @@
+@charset "utf-8";
+/* CSS Document */
+@media screen and (max-width: 960px) {
+  *{}
+   .banner,.smenu,.bg_g,.mark,.sns,nav,.col-2,.clo{ display:none;}
+   .inner{ width:100%; }
+   .nav{ display:;  height:100%; width:0%; overflow:hidden; background: rgba(255,181,20,0.8); color:#666; position:fixed; z-index:
+         9999; left:0; top:0;}
+   
+   .nav a{ display:block; text-align:left;  border-bottom:1px solid #69C; font-size: 3.5vw;}
+   .nav:before{ content:'category'; font-size:5vw; text-align:center; display:block; line-height:150px; 
+                border-bottom:5px solid  #69C;}
+   .nav:after{ content:'X'; font-size:5vw; color:#69C; position:absolute;top:65px; right:20px;}
+   nav{ height:0; overflow:hidden;}
+   .sub_nav{ width:80%; transition:all ease-in-out 0.3s;}
+   .m_nav{ display:block; width:50px; height:50px; color:#000; font-size:3em; text-align: center; line-height:48px;
+           position: fixed; right:10px; top:25px; border:1px solid #FFF; background: rgba(255,181,20,0.8); z-index:9999; border-radius:10%;}
+   
+/*------------------slider-----------------------*/ 
+.sld{ width:100%; max-width:100%; min-width:100%; }
+
+.page_a{width: 100%; background-image: url(images/main.jpg);}
+
+.slider .intro h2 span {width: 100%;}
+
+.yum .slider div span{font-size:3vw; line-height: 10px;}
+.yum .slider div p{font-size:2.3vw; line-height: 6px; margin: 1%;}
+
+
+
+.gallery_r{width: 100%; display: block;}
+.gallery{display: none;}
+/*------------------container-----------------------*/  
+  
+  .icon_menu{overflow: hidden;}
+  .icon_menu ul{width: 100%; text-align: center;}
+  
+  /*.icon_menu li{ width:33%; padding: 0%;display: inline-block;height: auto; text-align: center; position: relative;}*/
+  /*박스요소 정사각형유지*/
+   .icon_menu li:before{content: ""; display: block; /*padding-top: 100%;*/}
+
+  .menu_list li{ width:46%; margin:2%;}
+
+  .icon_menu h2 a{ }
+ .icon_menu span{font-size:1.5vw; line-height: 1px;}
+
+/*---------------------footer-----------------------*/
+  .adress .f_box{ width:100%;}
+  .adress .f_box:first-child{ display:none;}  
+
+/*-------------------가로화면에 대응하도록--------------------*/
+  .down p{font-size: 4vw;padding: 5vh 0 5vh 0; line-height: 40px; }
+  /*--------------------버튼하단으로내림-------------------*/
+  .down p span{display: block; position: relative;margin: auto;} 
+
+   
+/*---------------------ebook-----------------------*/
+  .widgets {width:90%; height:90%; border: solid 1px #ccc; background:#ece2e2; position:fixed; bottom:5%; right:20px;z-index:99995; opacity:1;} 
+   
+.obj03, .obj02{opacity: 0;z-index: -9999;}
+
+
+/*=====================반응형 스타일====================*/
+
+[class*="col-"]{ padding:10px; border: 0px solid #FC9; display: inline-block; }
+.col-4{width: 30%; display: inline-block;   }
+
+.inner_3 .col-4 span{font-size: 1vw; line-height: 130%;}
+
+.inner_li{width: 100%;}
+
+.container{display: none;}
+.container_2{width: 100%;height: 100%; display: block; background-color: #fff; }
+.mini_ba li{width: 100%;text-align: center; display: inline;}
+
+
+.copyright span{font-size: 3vw;}
+
+/*
+
+
+.dabang{height: 65vh;width: 100%; z-index: -999;}
+.cov{position: relative;width: 100%; height: 100%; top:0px;z-index: -999;}
+.dabang video{width: 100%;}
+
+*/
+
+.dabang{width: 100%; height: 100%;}
+.dabang video{width: 100%; position: relative;}
+
+/*
+#container .sub_menu_a
+#container .sub_menu_b{width: 100%; display: block;}
+*/
+
+.sub_menu p{display: none;}
+.col-10{display: none;}
+.col-2{display: none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

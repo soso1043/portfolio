@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ko">
+<script src=js/jquery-3.2.1.min.js></script>
+<script src=js/bx/src/js/jquery.bxslider.js></script>
+
+<head>
+  <meta charset="UTF-8">
+  <title>할리스커피</title>
+  <style type="text/css">
+  *{margin: 0; padding: 0;list-style: none; text-decoration: none;
+    box-sizing: border-box; color: #333; letter-spacing:-0.1em; }/*자간*/
+  	#header{width: 100%;}
+  	#slider{width: 100%;}
+  	#container{width: 100%; overflow: auto;}
+  	#footer{width: 100%; background: url(images/bg_footer.gif);}
+
+
+  	.inner{width: 940px; position: relative; left: 50%;
+  	/*공용박스*/margin-left: -470px;}
+  	/*position: absolute; height: 200px; border: solid;
+  	다 겹쳐서 하나로 보임*/
+    #header .inner{height: 140px;}/*자식선택자(개별박스)*/
+    #footer .inner{height: 140px; }
+    #footer pre{color: #9E9E9E; font-size: 11px; padding-top: 30px;}
+
+  	.logo{width: 270px; height: 70px; position: absolute; left: 50%; top: 50%; margin: -25px 0 0 -135px;}
+  	.l_m_01{width: 99px; position: absolute; left: 0;}
+  	.l_m_02{width: 69px; position: absolute; left: 110px; top: 20px;}
+
+  	.util_m{ float: right; padding: 20px 0;}
+  	.util_m li{ display: inline; margin: 8px;}
+
+  	.nav{width: 100%; height: 40px;position: absolute; bottom: 0;}
+  	.nav li{float: left; width:16.6% ; text-align: center; }
+  	.nav span{display: block; font-size:11px; transition: all ease 
+  		.0.3s;}/*문자메뉴를 이미지메뉴 밑으로 이동*/
+  	.navbox{width: 100%; height: 250px; background: url(images/bg_2depth.gif); background-color:#333; position:absolute; display: none; z-index: 9999;}
+    /* z-index 레이어 배치순위  숫자가 클수록 상단*/
+
+  	/*호버 이용시 사용
+  	.nav li:hover span{opacity: 1;}*/
+
+  	.navbox ul{width: 940px; margin: auto;  overflow: auto;} 
+  	/* overflow : float 넘침방지설정*/
+  	.navbox li{float: left; width: 16.6%;  padding-left: 20px; margin-top: 20px;}
+  	.navbox li a{color: gray; display: block; font-size: 13px; line-height: 25px;}
+  	.navbox li:first-child{padding-left: 45px;}
+  	.navbox li:nth-child(5){padding-left: 55px;}
+  	.navbox li:nth-child(6){padding-left: 35px;}
+
+/*view box class*/
+    
+    .c_box{width: 100%; float: left;}
+    .view{float: left; }
+    .view span{font-size: 11px;}
+    .w_240{width: 240px;}
+    .w_460{width: 460px;}
+    .w_25p{width: 25%; padding-top: 20px;}
+    
+    .h215{height: 215px;}
+    .h150{height: 150px;}
+
+    .mall_title{font-size: 12px; color: gray; line-height: 45px;}
+    .mall_list{width: 90%; margin: auto; font-size: 12px;}
+    .mall_list li{width: 33.3%; height: 130px; float: left;background: url(images/mall_bar01.gif)center right no-repeat;text-align:center; padding-top: 25px;}
+    .mall_list .no_bar{background: none; }
+
+    .mall_list2{width: 90%; margin: auto; font-size: 12px;}
+    .mall_list2 li{width: 33.3%; height: 80px; float: left;background: url(images/mall_bar01.gif)center right no-repeat; text-align:center;padding-top: 25px;}
+    .mall_list2 .no_bar{background: none;}
+    .mall_list2 p{font-size: 12px; line-height: 25px;}
+
+
+
+
+    .line{width: 100%; height: 2px; background: #930000; float: left;}
+         /*가로값필요*/
+    .info{line-height: 20px; font-size: 12px; padding: 5px;}
+    
+
+/**/
+     .subject{width: 160px; overflow: hidden; display: inline-block; line-height: 20px;text-overflow: ellipsis; text-indent: 5px;}
+     /*overflow: 넘치는 문자는 숨기는 기능. 
+       text-overflow: 글자 넘침 표시 ...로 표시됨*/
+     .date{display: inline-block; overflow: hidden; line-height: 20px; }
+
+     .news{width: 95%; font-size: 12px; padding-left: 60px; background: url(images/48_48.png)no-repeat 10px center; padding-top: 20px;}
+                /*좌우 위아래*/
+
+
+
+
+
+  </style>
+ <link rel="stylesheet" type="text/css" href="js/bx/src/css/jquery.bxslider.css">
+</head>
+<body>
+  <div id="header">
+  	<div class="inner">
+  	 <div class="l_m_01">
+  	 	<img src="images/gnb_smenu01.png" alt="가맹문의">
+  	 </div>
+  	 <div class="l_m_02">
+  	 	<img src="images/gnb_smenu02.gif" alt="아카데미">
+  	 	
+  	 </div>
+  	 <div class="util_m">
+  	  <ul>
+  	   <li><img src="images/util_01.gif" alt="로그인"></li>
+  	   <li><img src="images/util_02.gif" alt="로그인"></li>
+  	   <li><img src="images/util_04.gif" alt="로그인"></li>
+  	   <li><img src="images/util_03.gif" alt="로그인"></li>
+  	   <li><img src="images/util_05.gif" alt="로그인"></li>
+  	  </ul>
+  	 </div>
+  	 <h1 class="logo"> 
+  	 	<img src="images/logo.gif" alt="배너2">
+  	 </h1>
+  <div class="nav">
+   <ul>
+   	<li>
+   	 <a href="#"><img src="images/gnb_01.gif" alt="메뉴"></a>
+   	 <span>메뉴</span>
+   	</li>
+   	<li>
+   		<a href="#"><img src="images/gnb_02.gif" alt="메뉴"></a>
+   		<span>할리스 몰</span>
+   	</li>
+   	<li>
+   		<a href="#"><img src="images/gnb_03.gif" alt="메뉴"></a>
+   		<span>멤버십</span>
+   	</li>
+   	<li>
+   		<a href="#"><img src="images/gnb_04.gif" alt="메뉴"></a>
+   		<span>이벤트 및 공지</span>
+   	</li>
+   	<li>
+   		<a href="#"><img src="images/gnb_05.gif" alt="메뉴"></a>
+   		<span>매장</span>
+   	</li>
+   	<li>
+   		<a href="#"><img src="images/gnb_06.gif" alt="메뉴"></a>
+   		<span>할리스 소개</span>
+   	</li>
+   </ul>
+  </div>
+
+  	</div>
+<!--네비 전체메뉴          -->
+  	<div class="navbox">
+  		<ul>
+  			<li>
+  				<a href="#">New menu</a>
+                <a href="#">COFFEE</a>
+                <a href="#">라떼 · 초콜릿 · 티</a>
+                <a href="#">할리치노 · 빙수</a>
+                <a href="#">스파클링 · 아이스티</a>
+                <a href="#">베이커리·스낵MD</a>
+                <a href="#">MD상품</a>
+                <a href="#">MD원두</a>
+            </li>
+  			<li>
+  				<a href="#">할리스콘</a>
+                <a href="#">할리스 기프트카드</a>
+            </li>
+  			<li><a href="#">멤버십 혜택안내</a>
+                <a href="#">멤버십 등록 및 발급</a>
+            </li>
+  			<li>
+  				<a href="#">Notice</a>
+                <a href="#">Event</a>
+  			</li>
+  			<li>
+  				<a href="#">국내</a>
+                <a href="#">해외</a>
+  			</li>
+  			<li>
+  				<a href="#">HOLLYS Coffee</a>
+                <a href="#">About Coffee</a>
+                <a href="#">CSR</a>
+                <a href="#">Gallery</a>
+                <a href="#">혜택 안내</a>
+                <a href="#">본사 위치</a>
+                <a href="#">채용 안내</a>
+                <a href="#">가맹 문의</a>
+  			</li>
+
+
+  		</ul>
+  	</div>
+<!--전체메뉴 끝            -->
+  </div>  
+
+  <div id="slider">
+  	
+<!--bxslider-->
+   
+     <script>
+       $(document).ready(function(){
+         $('.slider').bxSlider();
+       });
+     </script>
+     
+     <div class="slider">
+       <div><img src="images/mainBanner_01.jpg" alt="배너" width="100%"></div>
+       <div><img src="images/mainBanner_02.jpg" alt="배너" width="100%"></div>
+       <div><img src="images/mainBanner_03.jpg" alt="배너" width="100%"></div>
+     </div>
+
+<!--bxslider  end-->
+
+  </div>
+
+  <div id="container">
+  	<div class="inner">
+     
+   <div class="c_box">
+     <div class="view w_240 h215">
+       <img src="images/menu_tit.gif"><br>
+       <img src="images/menu_img01.gif">
+     </div>
+     <div class="view w_460 h215">
+       <img src="images/mall_tit.gif">
+       <p class="mall_title">할리스커피 기프트카드 및 할리스콘 구입</p>
+       <ul class="mall_list">
+         <li>
+       <img src="images/mall_img03.gif">
+       <p>Coffee</p>
+         </li>
+         <li>
+       <img src="images/mall_img04.gif">
+         <p>Beverage</p></li>
+         <li class="no_bar">
+       <img src="images/mall_img05.gif">
+         <p>Bakery</p></li>
+       </ul>
+     </div>
+     <div class="view w_240 h215">
+       <img src="images/store_tit.gif"><br>
+       <img src="images/store_img01.gif">
+     </div>
+   </div>
+
+   <div class="c_box">
+     <div class="view w_240 h215">
+       <img src="images/mainBanner_04.jpg" alt="이미지">
+     </div>
+     <div class="view w_460 h215">
+       <img src="images/mainBanner_05.gif" alt="이미지">
+       
+     </div>
+     <div class="view w_240 h215">
+       <img src="images/mainBanner_06.jpg" alt="이미지">
+       
+     </div>
+   </div>
+
+   <div class="c_box">
+     <div class="view w_25p h150">
+       <img src="images/academy_tit.gif"> 
+       <p class="info">할리스커피 아카데미와 함께하는 즐거운 커피 여행!</p>
+       <img src="images/ico_arrow.gif">
+       <span>바로가기</span>
+     </div>
+     <div class="view w_25p h150">
+       <img src="images/recruit_tit.gif"> 
+       <p class="info">할리스커피에서 커피를 이해하고, 문화를 만들어 갈 인재를 초대합니다.</p>
+       <img src="images/ico_arrow.gif">
+       <span>바로가기</span>
+     </div>
+     <div class="view w_25p h150">
+       <img src="images/news_tit.gif"> <img src="images/ico_arrow.gif">
+        <ul>
+        <li><a href="#"><span class="subject">
+        <nobr>할리스커피 홈페이지 개인정보처리방침 개정 안내</nobr></span>
+        <span class="date">08-18</span>
+        </a></li>
+
+        <li><a href="#"><span class="subject">
+      <nobr>HOLLYS COFFEE FESTIVAL - 영수증 응모 이벤트 당첨자 발표</nobr></span>
+        <span class="date">08-28</span>
+        </a></li>
+
+        <li><a href="#">
+          <span class="subject">중간배당 기준일 공고</span>
+          <span class="date">12-04</span>
+        </a></li>
+        </ul>
+       
+     </div>
+     <div class="view w_25p h150">
+       <ul class="mall_list2">
+         <li><img src="images/img_etc01.gif"> <p>가맹문의</p></li>
+         <li><img src="images/img_etc02.gif"><p>아카데미 강좌</p></li>
+         <li class="no_bar"><img src="images/img_etc03.gif"><p>고객문의</p></li>
+       </ul>
+     </div>
+   </div>
+
+
+       <div class="line">
+         
+       </div>
+
+       <div class="c_box">
+         <div class="view w_25p h215">
+          <div style="height: 20px;"></div>
+          <img src="images/sns_tit.gif">
+          <img src="images/sns_01.gif"> 
+          <img src="images/sns_02.gif"> 
+          <img src="images/sns_03.gif">
+         
+         <div style="height: 5px;"></div>
+         <div class="news">
+           <p>2017-12-19 05:05</p>
+           <p>행복하자, 감기 걸리지 말고. 따뜻함을 선물해주고 싶은 친구를</p>
+         </div>
+        </div>
+
+         <div class="view w_25p h215">
+          <div style="height: 50px;"></div>
+         <div class="news">
+           <p>2017-12-19 05:05</p>
+           <p>행복하자, 감기 걸리지 말고. 따뜻함을 선물해주고 싶은 친구를</p>
+         </div>
+         </div>
+
+         <div class="view w_25p h215">
+          <div style="height: 50px;"></div>
+         <div class="news">
+           <p>2017-12-19 05:05</p>
+           <p>행복하자, 감기 걸리지 말고. 따뜻함을 선물해주고 싶은 친구를</p>
+         </div>
+         </div>
+
+         <div class="view w_25p h215">
+          <div style="height: 50px;"></div>
+         <div class="news">
+           <p>2017-12-19 05:05</p>
+           <p>행복하자, 감기 걸리지 말고. 따뜻함을 선물해주고 싶은 친구를</p>
+         </div>
+         </div>
+
+       </div>
+      
+    </div>
+  </div>  
+
+  <div id="footer">
+  	<div class="inner">
+      <pre>유통관리시스템 | 개인정보처리방침 | 서비스이용약관 | 멤버십이용약관 | 고객문의 | 고객설문 | 사이트맵
+
+
+
+법인명: (주) 할리스에프앤비 대표자: 김유진 사업자등록번211-87-610통신판매업: 제2012-서울강남-01081호 
+주소 : 서울특별시 강남구 테헤란로 620 미래에셋타워 13, 14대표전화02-2188-7100 (가맹문의 : 1670-4432)
+COPYRIGHT 2015 HOLLYS F&B Co., Ltd. All Rights Reserved.
+      </pre>
+      
+    </div>
+  </div>
+  <script>
+  	$(function(){
+  		$(".nav li span").css("display","none");/*span 문자메뉴 숨김*/
+
+  		$(".nav").mouseenter(function(){
+  			$(".navbox").stop().slideDown(300);           //네비박스 출력
+  			$(".nav li span").fadein();              //span 문자메뉴 출력
+
+  		});
+
+  		$(".navbox").mouseleave(function(){
+  			$(".navbox").stop().slideUp(300);             //네비박스 숨김
+  			$(".nav li span").fadeOut();             //span 문자메뉴 숨김
+  		});
+  	});
+  </script>
+
+</body>
+</html>

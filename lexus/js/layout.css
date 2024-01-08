@@ -1,0 +1,126 @@
+*{margin:0; padding:0; list-style: none; box-sizing: border-box;
+  text-decoration: none; color: #333; font-family:  "맑은 고딕"; 
+  border: 0px solid #ccc; letter-spacing: -0.1em; font-size: 13px;}
+
+ .ani{transition: all ease-in-out 0.3s;}
+
+header{width: 100%; height: auto;}
+footer{width: 100%;padding: 50px 0;}
+footer h3{font-size: 1.4em; line-height: 70px; font-weight: bold; letter-spacing: 0.2em;}
+footer span{ right: 0;}
+footer button{height: 80px; position: absolute; top: 20%; right: 20px;}
+footer .sns{ width: 400px; height: 60px; margin: 40px 0; }
+
+footer a{color: #333; font-size: 0.9em; padding: 0 30px 0 0; display: inline-block;
+        float: left;}
+footer code{width: 0%; height: 5px; background: #000; display: inline-block; 
+	transition: all ease 0.3s;}
+/*code : underline*/
+footer a:hover code{width: 100%;}
+
+footer .sns li{width: 60px; height: 60px;display: inline-block; border-radius: 50%;
+                border:1px solid #ccc; overflow: hidden; }
+footer .face{background: url(../images/sns.jpg);}
+footer .ins{background: url(../images/sns.jpg) -60px 0;}
+footer .you{background: url(../images/sns.jpg) -120px 0;}
+
+footer .face:hover{background: url(../images/sns.jpg) 0 -60px;}
+footer .ins:hover{background: url(../images/sns.jpg) -60px -60px;}
+footer .you:hover{background: url(../images/sns.jpg) -120px -60px;}
+
+
+
+
+
+.line{height: 1px; background: gray;}
+
+
+
+
+
+
+
+
+.inner{width: 1200px; position: relative;left: 50%; margin-left: -600px;overflow: auto;}
+/*overflow float left명령종료*/
+/*min : 최소가로너비*/
+
+.slider_box{width: 100%; height: auto; }
+.cont_01{width: 100%; height: auto;}
+.cont_02{width: 100%; height: 150px;}
+.cont_03{width: 100%; height: auto;}
+
+.fixed_01{width: 100%;  padding: 50px 0; background: url(../images/wide_2.jpg) center;
+          background-attachment: fixed; background-size: cover; text-align: center;
+          line-height: 30px; }
+.fixed_01 h1{line-height: inherit; color: #fff; letter-spacing: 0.1em;}
+            /*inherit: 아버지에게 200px 상속됨 */
+.fixed_01 h1 span{color: inherit; text-transform: uppercase;font-size: 30px;
+                  letter-spacing: inherit;}
+                                                /*대문자로변경*/  
+.fixed_01 p{color: #eee; font-size: 16px; padding-top: 12px;}  
+
+
+.fixed_02{width: 100%; height: 100px;}
+
+.scroll_R{width: 90px; height: 100%; background: #000; position: fixed; right: 0;
+        z-index: 10;}
+.scroll_R li{width: 100%; height: 90px; border-bottom: 1px solid #333; font-size: 0.8em;
+             text-align: center; color: #ccc; line-height: 140px; opacity: 0.5;}
+                                              /*텍스트하단위치*/
+.scroll_R :hover{opacity:1;}
+.scroll_R li:first-child{background:url(../images/gift_icon.png)center;background-size: 80%;}
+.scroll_R li:nth-child(2){background:url(../images/car_icon.png)center;background-size: 80%;}
+.scroll_R li:nth-child(3){background:url(../images/flag_icon.png)center;background-size: 80%;}
+.scroll_R li:nth-child(4){background:url(../images/card_icon.png)center;background-size: 80%;}
+.scroll_R li:nth-child(5){background:url(../images/hand_icon.png)center;background-size: 80%;}
+.scroll_R li:last-child{background:url(../images/handle_icon.png)center;background-size: 80%;}
+
+
+.logo{width: 300px; height:auto; padding-top:20px 0; float: left;}
+nav{width: 800px;position: absolute; left: 50%; margin-left:-300px; top: 20px;}
+header .inner{padding-bottom: 20px;}
+nav a{padding: 10px; color: black; font-weight: bold; font-size: 15px; margin: 0 10px;}
+nav a:last-child{border-left: 1px solid #333; font-size: 13px; font-weight: normal;}
+.btn_box{text-align: center; padding:  30px 0;}
+.btn_box2{color: #333; padding:  30px 0;}
+
+
+
+.in_box{width: 32%;margin-right: 2%; float: left;height: 250px;}
+.in_box:last-child{margin: 0;}/*마지막요소 마진삭제, 위에서 오른쪽에 2% 마진을줬는데
+                              맨마지막요소는 마진이 없어야되기때문에*/
+.in_box:hover img{transform: scale(1.1, 1.1);}
+
+figure img{ width: 100%;height: 100%; transition: all ease 0.3s;}
+figure{width: 100%; float: left; height: 100px; overflow: hidden;}
+.in_box h1{width: 50%; float: left; padding:2%; font-size: 25px;font-size: 2.0em;
+          text-transform: uppercase;}
+.in_box p{width: 50%; float: left;padding: 2%;font-size: 0.9em; text-align: justify;}
+
+.flex{width: 100%;  display: flex; }
+.flex .f_box{width: 25%; height: 350px; margin: 20px 10px;}
+.flex .f_box:nth-child(2){width: 50%;display: flex;flex-wrap: wrap;}
+.fi_box{width: 50%; height: 50%; border: 1px solid #ccc; }
+.fi_box img{width: 100%; }
+.fi_box p{text-align: center; font-size: 16px; padding-top: 5px;}
+.fi_box:hover img{transform: scale(1.1, 1.1);overflow: hidden;}
+
+
+.won{width: 280px; height: 280px; position: relative;top: 50%; margin-top: -140px;
+  border-radius: 50%;border: 1px solid #333; overflow: hidden;} 
+.won .bg{width: 100%; height: 50%; background: rgba(0,0,0,0.5); position: absolute; 
+	bottom: 0;}
+.won figure{width:100%; height: 100%;}
+
+.won h1{color: #eee; font-size: 1.4em; line-height: 140px; text-align: center;}
+.won .bg_01{background: url(../images/photo_02.jpg) center;
+	background-size:auto 100%;}
+.won:hover .bg_01{background-size: auto 120%;} 
+
+.won .bg_02{background: url(../images/plan.jpg) center;
+	background-size: auto 100%;}
+.won:hover .bg_02{background-size: auto 120%;} 
+
+.banner{display:inline-block;width: 800px;}
+.banner img{width: 50%;}

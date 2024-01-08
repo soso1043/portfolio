@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>미래동물병원</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <style type="text/css">
+  *{margin: 0; padding: 0;list-style: none; font-family: 'Malgun Gothic';}
+  
+  .wrap{background-color: #fcf7f1;width: 100%;}
+  .header{height: 100px;}
+  
+  
+
+  .footer{height: 300px;}
+
+  .leftbox{background-color: rgba(99,99,99,0.9); position: fixed;height: 100%; width: 80%; z-index: 99999; display: none;}
+
+
+.l_menu{ width: 100%; margin-top: 80px;}
+
+.l_menu li{background:;  color: #e2e1e0;
+    line-height: 40px; text-indent: 20px;transition: all ease 1s; margin: 10px 0;}
+
+.sub_1{width: 100%; font-size: 0.8em; margin: 50px 0; }
+.inner_b{text-align: center; }
+
+a{text-decoration: none;}
+.mirae h1{font-size: 25px; text-align: center;margin: 0px 0; color: #ccc;}
+.mirae h2{text-align: center;margin: 20px 0;}
+.mirae h2 img{width: 20%;}
+
+#main{text-align: center;}
+ #main li{display: inline; width:18%; }
+ #main li img{width: 70%;}
+ #main li:first-child{position: fixed; left: 10px; margin-top: 30px; z-index: 999999; }
+ #main li:nth-child(2){position: absolute; left: 50%; margin-left: -30px; margin-top: 25.5px;}
+ #main li:nth-child(3){position: absolute; right: 10px; margin-top: 25.5px;}
+
+
+
+#menu_li li img{width: 70%; }/*li 안에 img사이즈를 70%만 채우겠다는얘기*/
+.menu{text-align: center; padding: 10px 0;}
+.menu li{display: flex; text-align: center; display: inline-block;  }/*여백 10%생각해서 90%를
+                                                                5개로나눔*/
+.menu a{text-decoration: none; color:#726868; font-size:1.1em;}
+.menu p{margin: 10px;}
+
+.bar_a{width: 100%; height: 10vw; background-color: #736357;  font-size: 1.3em; color: #ccc;}
+.bar_li dt{width: 96%; position: absolute; padding-left: 2%; }
+.bar_li{}
+.bar_li dd{margin-left:20%; line-height: 200%; font-size: 4vw;}
+
+
+
+
+.reser{margin-bottom: 10px;}
+.box{width: 90%;background-color: #534741; margin: 0 auto; margin-top: 100px; padding: 10px; color: #fff;}
+.box ul{text-align: center; }
+.box li{padding: 5px;}
+.box a{text-decoration: none; color: #fff;}
+.inner li:first-child{ border-bottom: 1px solid #fcf7f1; margin-bottom: 20px;}
+.inner li:last-child{ background-color: salmon; font-size: 1.2em; margin-top:10px; 
+                      padding: 10px 0;}
+.input{width: 100%; height: 10vw;}
+
+
+.footer{background-color: #464646; font-size: 4vw; border: 1px solid; width: 100%;text-align: center;color: #ccc;height: 100%;}
+.intro ul{padding-top: 50px; padding-bottom: 20px;}
+
+ 
+.sns{width: 100%;}
+.sns a{ text-decoration: none; }
+.sns img{width: 15%; padding-top:80px;}
+.sns li{display: inline; padding: 0 27px;}
+.sns_b li{display: inline; padding: 0 15px;}
+.sns_b li:first-child{padding: 15px;}
+
+.review{width: 100%; text-align: center;  }
+.review a{text-decoration: none; color:#939290;}
+.dog_a img{width: 80%; margin-top: 60px;}
+.dog_a li:nth-child(2){width: 80%; border-top: 1px solid #754c24; border-bottom: 1px solid #754c24; margin: 20px auto; padding: 10px 0;}
+.dog_a li:nth-child(3){background-color: #fbd0d0;width: 30%;margin: 10px auto; padding: 10px 0;}
+
+.dog_b{background-color: #f3d3fa; padding: 20px 0; font-size: 1.1em; font-weight: bold;}
+.fome{width: 70%;}
+
+.line{box-shadow: 0 1px gray; height: 1px; background:rgba(0,0,0,0.98); margin:30px auto; width: 90%; }
+
+
+
+
+
+
+/*100vh = 100%*/
+
+
+
+
+ </style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="leftbox">
+
+    <div class="mirae"> 
+      <a href="index.html"><h2><img src="images/a_s_2.png"></h2></a>
+      <h1>미래동물의료센터</h1> 
+    </div>
+
+
+ <ul class="l_menu">
+  <a href="#"><li>병원소개</li></a>
+
+  <a href="#"><li>진료사례
+    <div class="sub"></div>
+  </li></a>
+
+  <a href="sub.html"><li>미래 미용실
+    <div class="sub"></div>
+  </li></a>
+
+  <a href="#"><li>강아지/고양이 호텔
+    <div class="sub"></div>
+  </li></a>
+
+  <a href="#"><li>예약
+    <div class="sub"></div>
+  </li></a>
+
+  <div class="line"></div>
+  
+  
+    <div class="sub_1">
+      <div class="inner_b">
+     경기도 성남시 분당구 서현동 80-1<br>
+     대표전화 : 031-705-2475 대표 : 김ㅇㅇ<br>
+     사업자등록번호 : 123-12-12345<br>
+      </div>
+    </div>
+  
+
+  </ul>
+  </div>
+ 
+
+  <script>
+
+   $(function(){
+    $(".clik").click(function(){
+       $(".leftbox").animate({'width':'toggle'});
+       });
+
+    });  
+     
+
+    
+  </script>
+
+
+
+ <div class="header">
+   <ul id="main">
+ 	<li><img class="clik" src="images/a_09.png" alt="로고"></li>
+ 	<li><a href="index.html"><img src="images/a_s.png" alt="로고"></a></li>
+ 	<li><img src="images/a_06.png" alt="로고"></li>
+   </ul>
+ </div>
+
+<div class="bar_a">
+  <dl class="bar_li">
+      <dt><img src="images/icon_3_2.png" alt="가위" width="10%"></dt>
+      <dd>미용</dd>
+  </dl>
+</div>
+
+<div class="review">
+    
+  <ul class="dog_b">
+    <li><img class="fome" src="images/fome_3.png" alt="ㅌㅌ" ></li>
+    <li>미래 미용실</li>
+  </ul>
+
+  
+  
+  <ul class="dog_a">
+    <li><img src="images/jjo.jpg" alt="ㅌㅌ" ></li>
+    <li>♥말티즈 쪼리 미용후기♥</li>
+    <li><a href="#">자세히보기+</a></li>
+  </ul>
+
+  <ul class="dog_a">
+    <li><img src="images/leo.jpg" alt="ㅌㅌ" ></li>
+    <li>♥스피츠 레오 미용후기♥</li>
+    <li><a href="#">자세히보기+</a></li>
+  </ul>
+
+  <ul class="dog_a">
+    <li><img src="images/berry.jpg" alt="ㅌㅌ" ></li>
+    <li>♥푸들 베리 미용후기♥</li>
+    <li><a href="#">자세히보기+</a></li>
+  </ul>
+
+  <ul class="dog_a">
+    <li><img src="images/pepper.jpg" alt="ㅌㅌ" ></li>
+    <li>♥푸들 후추 미용후기♥</li>
+    <li><a href="#">자세히보기+</a></li>
+  </ul>
+
+
+
+
+
+</div>
+ 
+
+
+
+
+
+<div class="reser">
+  <div class="box">
+     <ul class="inner">
+     <li><a href="#">상담/예약하기</a></li>
+     <li><label for="name" >본인이름</label></li>
+     <li><input type="text" id="name" class="input" required/></li>
+     <li><label for="phone" >연락처</label></li>
+     <li><input type="text" id="phone" class="input" required/></li>
+     <li><label for="phone" >상담내용</label></li>
+     <li><textarea style=height:100px;width:90%;overflow:auto;padding:5%;  required/></textarea></li>
+     <li><a href="#" ">신청하기</a></li>
+    </ul>
+  </div>
+ </div>
+
+ <div class="footer">
+  
+
+  <div class="sns">
+   <ul>
+   <li><a href="#"><img src="images/Insta.png" alt="로고" width="50"></a></li>
+   <li><a href="#"><img src="images/face.png" alt="로고" width="50"></a></li>
+   <li><a href="#"><img src="images/twit.png" alt="로고" width="50"></a></li>
+  </ul>
+  </div>
+
+  <div class="sns_b">
+   <ul>
+   <li>mirae.24</li>
+   <li>미래동물의료센터</li>
+   <li>24mirae</li>
+  </ul>
+ </div>
+
+ <div class="line"></div>
+
+<div class="intro">
+   <ul>
+     <li>경기도 성남시 분당구 서현동 80-1</li>
+     <li>대표전화 : 031-705-2475 대표 : 김ㅇㅇ</li>
+     <li>사업자등록번호 : 123-12-12345</li>
+   </ul>
+  </div>
+
+
+</div>
+	
+</body>
+</html>
+

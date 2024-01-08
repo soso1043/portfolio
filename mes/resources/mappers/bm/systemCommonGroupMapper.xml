@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  	
+<mapper namespace="mes.mappers.bm.systemCommonGroupMapper">
+
+	<resultMap id="SystemCommonGroupVo" type="mes.domain.bm.SystemCommonGroupVo">
+		<result property="baseGroupCd"		column="BASE_GROUP_CD"		/>
+		<result property="baseGroupCdNm"	column="BASE_GROUP_CD_NM"	/>
+		<result property="baseGroupCdDesc"	column="BASE_GROUP_CD_DESC"	/>
+		<result property="useYn"			column="USE_YN"				/>
+		<result property="regId"			column="REG_ID"				/>
+		<result property="regDate"			column="REG_DATE"			/>
+		<result property="updId"			column="UPD_ID"				/>
+		<result property="updDate"			column="UPD_DATE"			/>
+	</resultMap>
+	
+	
+	<!-- 시스템공통그룹 전체조회 -->
+	<select id="listAll" resultMap="SystemCommonGroupVo">
+		<![CDATA[
+		select	BASE_GROUP_CD, BASE_GROUP_CD_NM, BASE_GROUP_CD_DESC, USE_YN, REG_ID, REG_DATE, UPD_ID, UPD_DATE
+		from	TB_SYSTEM_COMMON_GROUP
+		order by BASE_GROUP_CD asc
+		]]>
+	</select>
+	
+	
+	<select id="read" resultMap="SystemCommonGroupVo">
+		<![CDATA[
+		select	BASE_GROUP_CD, BASE_GROUP_CD_NM, BASE_GROUP_CD_DESC, USE_YN, REG_ID, REG_DATE, UPD_ID, UPD_DATE
+		from	TB_SYSTEM_COMMON_GROUP
+		where BASE_GROUP_CD=#{baseGroupCd}
+		]]>
+	</select>
+	
+	
+	<insert id="create" parameterType="mes.domain.bm.SystemCommonGroupVo">
+		<![CDATA[
+		insert into TB_SYSTEM_COMMON_GROUP(
+			BASE_GROUP_CD, BASE_GROUP_CD_NM, BASE_GROUP_CD_DESC, USE_YN, REG_ID, REG_DATE
+		) 
+		values (
+			#{baseGroupCd},	#{baseGroupCdNm}, #{baseGroupCdDesc}, #{useYn}, #{regId}, getDate())
+		]]>
+	</insert>
+	
+	<update id="update">
+		<![CDATA[
+		update TB_SYSTEM_COMMON_GROUP
+		set	BASE_GROUP_CD = #{baseGroupCd},
+			BASE_GROUP_CD_NM = #{baseGroupCdNm},
+			BASE_GROUP_CD_DESC = #{baseGroupCdDesc},
+			USE_YN = #{useYn},
+			UPD_ID = #{updId},
+			UPD_DATE = getdate()
+		where	BASE_GROUP_CD = #{baseGroupCd}
+		]]>
+	</update>
+	
+
+</mapper>

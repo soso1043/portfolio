@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/img/dev_logo_fav_wh.png">
+    <title>recipe_edit_def</title>
+    <link rel="stylesheet" type="text/css" href="assets/lib/perfect-scrollbar/css/perfect-scrollbar.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/material-design-icons/css/material-design-iconic-font.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/select2/css/select2.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap-slider/css/bootstrap-slider.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/summernote/summernote-bs4.css"/>
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css"/>
+  </head>
+  <body>
+    <div class="be-wrapper">
+      <nav class="navbar navbar-expand fixed-top be-top-header header_bg">
+        <div class="container-fluid">
+          <div class="be-navbar-header"><a class="navbar-brand" href="dashboard_1.html"></a>
+          </div>
+          <div class="page-title"><span class="icon mdi mdi-arrow-left"></span><span class="icon mdi mdi-arrow-right"></span></div>
+          <div class="be-right-navbar"><!--col-5-->
+            <ul class="nav navbar-nav float-left be-user-nav">
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><img src="assets/img/user.svg" alt="Avatar"><span class="user-name">sjlee@leancanvas.io</span></a>
+                <div class="dropdown-menu" role="menu">     
+                  <div class="user-info">
+                    <div class="user-name">sjlee@leancanvas.io</div>
+                    <div class="user-position online">Available</div>
+                  </div><a class="dropdown-item" href="pages-profile.html"><span class="icon mdi mdi-face"></span>Account</a><a class="dropdown-item" href="#"><span class="icon mdi mdi-settings"></span>Settings</a><a class="dropdown-item" href="pages-login.html"><span class="icon mdi mdi-power"></span>Logout</a>
+                </div>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav float-left be-user-nav nav_google_icon">
+              <li><img src="assets/img/google_icon.svg" alt="Avatar"></li>
+            </ul>
+            <ul class="nav navbar-nav float-right be-icons-nav">
+              <li class="nav-item dropdown"><a class="nav-link be-toggle-right-sidebar" href="#" role="button" aria-expanded="false">설명</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="be-left-sidebar">
+        <div class="left-sidebar-wrapper"><a class="left-sidebar-toggle" href="#">로그인 - 회원가입</a>
+          <div class="left-sidebar-spacer">
+            <div class="left-sidebar-scroll">
+              <div class="left-sidebar-content">
+                <ul class="sidebar-elements icon_right">
+                  <h1 class="result_title">제목을 입력하세요</h1>
+                  <h2 class="result_subtitle">모바일 웹 | 쇼핑몰</h2>
+                  <li class="parent add_btn"><a href="#"><span>+ 기능 추가하기</span></a></li>
+                  <li class="parent tree_edi_del"><i class="icon mdi mdi-delete icon_hover_red"></i><i class="icon mdi mdi-edit"></i><span>페이지명을 입력하세요</span></li>
+                  <li class="parent tree_edi_del"><i class="icon mdi mdi-delete icon_hover_red"></i><i class="icon mdi mdi-edit"></i><span>페이지명의 제목이길어지면</span></li>
+                  <li class="parent tree_edi_del page_select"><i class="icon mdi mdi-delete icon_hover_red"></i><i class="icon mdi mdi-edit"></i><span>선택된 페이지의 컬러</span></li>
+                  <li class="parent tree_edi_del"><i class="icon mdi mdi-delete icon_hover_red"></i><i class="icon mdi mdi-edit"></i><span>페이지명을 입력하세요</span></li>
+                  <li class="parent tree_edi_del"><i class="icon mdi mdi-delete icon_hover_red"></i><i class="icon mdi mdi-edit"></i><span>페이지명의 제목이길어지면</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="be-content">
+        <!--관심목록에서추가 모달-->
+                <div class="custom-width modal-container modal-effect-1 colored-header colored-header-primary" id="nft-mylist">
+                  <div class="modal-content">
+                    <div class="modal-header modal-header-colored">
+                      <h3 class="modal-title">관심목록에서 추가</h3>
+                      <button class="close md-close" type="button" data-dismiss="modal" aria-hidden="true"><span class="mdi mdi-close">       </span></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="col-lg-7 mb-7">
+                        <div class="be-aside-header-search">
+                          <div class="input-group input-search input-group-sm input-radius">
+                            <input class="form-control" type="text" placeholder="Search">
+                            <span class="input-group-btn btn-radius">
+                              <button class="btn btn-secondary" type="button"><i class="icon mdi mdi-search"></i></button>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row row_margin0">
+                        <div class="col-lg-4">
+                          <div class="card card_shadow">
+                          <div class="mylist_thumb">
+                            <img class="card-img-top" src="assets/img/ex_ui3.png" alt="Placeholder">
+                          </div>
+                              <div class="form-group col-md-12 layout_padding">
+                                  <label class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" name="radio-inline"><span class="custom-control-label edit_listmodal_radio">SNS 로그인 - 구글 로그인</span>
+                                  </label>
+                              </div>
+                            <div class="card-body">
+                              <p class="text_overflow">사용자는 로그인 창에서 아이디와 비밀번호를 입력
+                                하는 데 집중하기 때문에 주변의 요소는 잘 인지사용자는 로그인 창에서 아이디와 비밀번호를 입력
+                                하는 데 집중하기 때문에 주변의 요소는 잘 인지 때문에 주변의 요소는 잘 인지
+                              </p>
+                              <ul class="mylist_taglist">
+                                <li>#네이버로그인개발</li>
+                                <li>#naverlogin_네이버로그인개발</li>
+                                <li>#naverlogin</li>
+                                <li>#네이버로그인개발</li>
+                                <li>#naverlogin_네이버로그인개발</li>
+                                <li>#naverlogin</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="card card_shadow">
+                          <div class="mylist_thumb">
+                            <img class="card-img-top" src="assets/img/ex_ui5.png" alt="Placeholder">
+                          </div>
+                              <div class="form-group col-md-12 layout_padding">
+                                  <label class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" name="radio-inline"><span class="custom-control-label edit_listmodal_radio">SNS 로그인 - 구글 로그인</span>
+                                  </label>
+                              </div>
+                            <div class="card-body">
+                              <p class="text_overflow">사용자는 로그인 창에서 아이디와 비밀번호를 입력
+                                하는 데 집중하기 때문에 주변의 요소는 잘 인지사용자는 로그인 창에서 아이디와 비밀번호를 입력
+                                하는 데 집중하기 때문에 주변의 요소는 잘 인지 때문에 주변의 요소는 잘 인지
+                              </p>
+                              <ul class="mylist_taglist">
+                                <li>#네이버로그인개발</li>
+                                <li>#naverlogin_네이버로그인개발</li>
+                                <li>#naverlogin</li>
+                                <li>#네이버로그인개발</li>
+                                <li>#naverlogin_네이버로그인개발</li>
+                                <li>#naverlogin</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="card card_shadow">
+                          <div class="mylist_thumb">
+                            <img class="card-img-top" src="assets/img/ex_ui2.png" alt="Placeholder">
+                          </div>
+                              <div class="form-group col-md-12 layout_padding">
+                                  <label class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" name="radio-inline"><span class="custom-control-label edit_listmodal_radio">SNS 로그인 - 구글 로그인</span>
+                                  </label>
+                              </div>
+                            <div class="card-body">
+                              <p class="text_overflow">사용자는 로그인 창에서 아이디와 비밀번호를 입력
+                                하는 데 집중하기 때문에 주변의 요소는 잘 인지사용자는 로그인 창에서 아이디와 비밀번호를 입력
+                                하는 데 집중하기 때문에 주변의 요소는 잘 인지 때문에 주변의 요소는 잘 인지
+                              </p>
+                              <ul class="mylist_taglist">
+                                <li>#네이버로그인개발</li>
+                                <li>#naverlogin_네이버로그인개발</li>
+                                <li>#naverlogin</li>
+                                <li>#네이버로그인개발</li>
+                                <li>#naverlogin_네이버로그인개발</li>
+                                <li>#naverlogin</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="card card_shadow">
+                          <div class="mylist_thumb">
+                            <img class="card-img-top" src="assets/img/ex_ui4.png" alt="Placeholder">
+                          </div>
+                              <div class="form-group col-md-12 layout_padding">
+                                  <label class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" name="radio-inline"><span class="custom-control-label edit_listmodal_radio">SNS 로그인 - 구글 로그인</span>
+                                  </label>
+                              </div>
+                            <div class="card-body">
+                              <p class="text_overflow">사용자는 로그인 창에서 아이디와 비밀번호를 입력
+                                하는 데 집중하기 때문에 주변의 요소는 잘 인지사용자는 로그인 창에서 아이디와 비밀번호를 입력
+                                하는 데 집중하기 때문에 주변의 요소는 잘 인지 때문에 주변의 요소는 잘 인지
+                              </p>
+                              <ul class="mylist_taglist">
+                                <li>#네이버로그인개발</li>
+                                <li>#naverlogin_네이버로그인개발</li>
+                                <li>#naverlogin</li>
+                                <li>#네이버로그인개발</li>
+                                <li>#naverlogin_네이버로그인개발</li>
+                                <li>#naverlogin</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="card card_shadow">
+                          <div class="mylist_thumb">
+                            <img class="card-img-top" src="assets/img/ex_ui1.png" alt="Placeholder">
+                          </div>
+                              <div class="form-group col-md-12 layout_padding">
+                                  <label class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" name="radio-inline"><span class="custom-control-label edit_listmodal_radio">SNS 로그인 - 구글 로그인구글 로그인구글 로그인</span>
+                                  </label>
+                              </div>
+                            <div class="card-body">
+                              <p class="text_overflow">사용자는 로그인 창에서 아이디와 비밀번호를 입력
+                                하는 데 집중하기 때문에 주변의 요소는 잘 인지사용자는 로그인 창에서 아이디와 비밀번호를 입력
+                                하는 데 집중하기 때문에 주변의 요소는 잘 인지 때문에 주변의 요소는 잘 인지
+                              </p>
+                              <ul class="mylist_taglist">
+                                <li>#네이버로그인개발</li>
+                                <li>#naverlogin_네이버로그인개발</li>
+                                <li>#naverlogin</li>
+                                <li>#네이버로그인개발</li>
+                                <li>#naverlogin_네이버로그인개발</li>
+                                <li>#naverlogin</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-secondary md-close" type="button" data-dismiss="modal">취소</button>
+                      <button class="btn btn-primary md-close" type="button" data-dismiss="modal">저장</button>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="modal-overlay"></div>
+        <!--/관심목록에서추가 모달-->
+
+        <!--직접입력으로추가 모달-->
+                <div class="custom-width modal-container modal-effect-1 colored-header colored-header-primary" id="nft-custom">
+                  <div class="modal-content">
+                    <div class="modal-header modal-header-colored">
+                      <h3 class="modal-title">직접입력으로 추가</h3>
+                      <button class="close md-close" type="button" data-dismiss="modal" aria-hidden="true"><span class="mdi mdi-close">       </span></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="form-group">
+                        <label>썸네일 이미지 첨부</label>
+                        <div class="input-group mb-3">
+                          <div class="custom-file">
+                            <input class="custom-file-input" id="inputGroupFile02" type="file">
+                            <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>제목</label>
+                        <input class="form-control" type="email" placeholder="제목을 입력하세요">
+                      </div>
+                      <div class="form-group">
+                        <label>해시태그</label>
+                        <div class="input-group mb-3">
+                          <input class="form-control" type="text" placeholder="해시태그를 입력하세요">
+                          <div class="input-group-append">
+                            <button class="btn btn-primary" type="button">추가</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <ul class="modal_hashtag_li">
+                          <li>#네이버로그인<span class="mdi mdi-close"></span></li>
+                          <li>#소셜로그인<span class="mdi mdi-close"></span></li>
+                          <li>#naverlogin_네이버로그인개발<span class="mdi mdi-close"></span></li>
+                          <li>#소셜로그인<span class="mdi mdi-close"></span></li>
+                          <li>#네이버로그인<span class="mdi mdi-close"></span></li>
+                          <li>#소셜로그인<span class="mdi mdi-close"></span></li>
+                          <li>#소셜로그인<span class="mdi mdi-close"></span></li>
+                          <li>#naverlogin_네이버로그인개발<span class="mdi mdi-close"></span></li>
+                          <li>#소셜로그인<span class="mdi mdi-close"></span></li>
+                        </ul>
+                      </div>
+                      <!--모달 - 탭 메뉴-->
+                      <div class="col-12 edit_border" style="padding:0;">
+                        <div class="tab-container">
+                          <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item"><a class="nav-link active" href="#home" data-toggle="tab" role="tab">상세설명</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#profile" data-toggle="tab" role="tab">적용방법</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#messages" data-toggle="tab" role="tab">참고사이트</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#error" data-toggle="tab" role="tab">자주 나오는 오류</a></li>
+                          </ul>
+                        <div class="tab-content" style="padding:10px 0;margin:0;">
+                              <div class="col-md-12 tab-pane active" id="home" role="tabpanel">
+                                    <div id="editor1"></div>
+                              </div>
+                              <div class="col-md-12 tab-pane" id="profile" role="tabpanel">
+                                    <div id="editor2"></div>
+                              </div>
+                              <div class="col-md-12 tab-pane" id="messages" role="tabpanel">
+                                    <div id="editor3"></div>
+                              </div>
+                              <div class="col-md-12 tab-pane" id="error" role="tabpanel">
+                                    <div id="editor4"></div>
+                                    <p>Consectetur adipisicing elit. Ipsam ut praesentium, voluptate quidem necessitatibus quam nam officia soluta aperiam, recusandae.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facilis laboriosam, vitae ipsum tenetur atque vel repellendus culpa reiciendis velit quas, unde soluta quidem voluptas ipsam, rerum fuga placeat rem error voluptate eligendi modi. Delectus, iure sit impedit? Facere provident expedita itaque, magni, quas assumenda numquam eum! Sequi deserunt, rerum.</p><a href="#">Read more  </a>
+                              </div>
+                        </div>
+                        </div>
+                      </div>
+                      <!--/모달 - 탭 메뉴-->
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-secondary md-close" type="button" data-dismiss="modal">취소</button>
+                      <button class="btn btn-primary md-close" type="button" data-dismiss="modal">저장</button>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="modal-overlay"></div>
+        <!--/직접입력으로추가 모달-->
+
+        <!--레이아웃ui등록 모달-->
+                <div class="custom-width modal-container modal-effect-1 colored-header colored-header-primary" id="nft-layout">
+                  <div class="modal-content">
+                    <div class="modal-header modal-header-colored">
+                      <h3 class="modal-title">레이아웃UI 추가</h3>
+                      <button class="close md-close" type="button" data-dismiss="modal" aria-hidden="true"><span class="mdi mdi-close">       </span></button>
+                    </div>
+                    <div class="modal-body" style="padding:0;">
+                      <div class="col-12" style="padding:0;">
+                        <div class="tab-container">
+                          <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item"><a class="nav-link active" href="#home1" data-toggle="tab" role="tab">레이아웃</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#error1" data-toggle="tab" role="tab">내 컴퓨터</a></li>
+                          </ul>
+                        <div class="tab-content" style="padding:10px 0;margin:0;">
+                              <div class="col-md-12 tab-pane active" id="home1" role="tabpanel">
+                     <div class="row mb-5 mt-5">
+                      <div class="form-group col-4">
+                        <div class="col-12" style="padding:0;">
+                          <select class="select2 select_input_no">
+                            <option> </option>
+                            <optgroup label="PC">
+                              <option value="AK">웹</option>
+                              <option value="HI">Hawaii</option>
+                            </optgroup>
+                            <optgroup label="모바일">
+                              <option value="CA">California</option>
+                              <option value="NV">Nevada</option>
+                              <option value="OR">Oregon</option>
+                              <option value="WA">Washington</option>
+                            </optgroup>
+                            <optgroup label="모바일네이티브">
+                              <option value="AZ">Arizona</option>
+                              <option value="CO">Colorado</option>
+                            </optgroup>
+                            <optgroup label="Central Time Zone">
+                              <option value="AL">Alabama</option>
+                              <option value="AR">Arkansas</option>
+                              <option value="IL">Illinois</option>
+                              <option value="IA">Iowa</option>
+                            </optgroup>
+                            <optgroup label="Eastern Time Zone">
+                              <option value="CT">Connecticut</option>
+                              <option value="DE">Delaware</option>
+                              <option value="FL">Florida</option>
+                            </optgroup>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group col-4">
+                        <div class="col-12" style="padding:0;">
+                          <select class="select2 select_input_no" placeholder="sdsdsd">
+                            <option> </option>
+                            <optgroup label="PC">
+                              <option value="AK">웹</option>
+                              <option value="HI">Hawaii</option>
+                            </optgroup>
+                            <optgroup label="모바일">
+                              <option value="CA">California</option>
+                              <option value="NV">Nevada</option>
+                              <option value="OR">Oregon</option>
+                              <option value="WA">Washington</option>
+                            </optgroup>
+                            <optgroup label="모바일네이티브">
+                              <option value="AZ">Arizona</option>
+                              <option value="CO">Colorado</option>
+                            </optgroup>
+                            <optgroup label="Central Time Zone">
+                              <option value="AL">Alabama</option>
+                              <option value="AR">Arkansas</option>
+                              <option value="IL">Illinois</option>
+                              <option value="IA">Iowa</option>
+                            </optgroup>
+                            <optgroup label="Eastern Time Zone">
+                              <option value="CT">Connecticut</option>
+                              <option value="DE">Delaware</option>
+                              <option value="FL">Florida</option>
+                            </optgroup>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="be-aside-header-search">
+                          <div class="input-group input-search input-group-sm input-radius">
+                            <input class="form-control" type="text" placeholder="Search">
+                            <span class="input-group-btn btn-radius">
+                              <button class="btn btn-secondary" type="button"><i class="icon mdi mdi-search"></i></button>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                     </div>
+                     <div class="row row_margin0">
+                      <div class="col-lg-4">
+                        <div class="card card_shadow">
+                        <div class="mylist_thumb">
+                          <img class="card-img-top" src="assets/img/ex_ui4.png" alt="Placeholder">
+                        </div>
+                        <div class="form-group col-md-12 layout_padding">
+                            <label class="custom-control custom-radio custom-control-inline">
+                              <input class="custom-control-input" type="radio" name="radio-inline"><span class="custom-control-label edit_listmodal_radio">카카오톡로그인카카오톡로그인카카오톡로그인</span>
+                            </label>
+                        </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="card card_shadow">
+                        <div class="mylist_thumb">
+                          <img class="card-img-top" src="assets/img/ex_ui1.png" alt="Placeholder">
+                        </div>
+                        <div class="form-group col-md-12 layout_padding">
+                            <label class="custom-control custom-radio custom-control-inline">
+                              <input class="custom-control-input" type="radio" name="radio-inline"><span class="custom-control-label edit_listmodal_radio">소셜로그인소셜로그인소셜로그인소셜로그인</span>
+                            </label>
+                        </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="card card_shadow">
+                        <div class="mylist_thumb">
+                          <img class="card-img-top" src="assets/img/ex_ui2.png" alt="Placeholder">
+                        </div>
+                        <div class="form-group col-md-12 layout_padding">
+                            <label class="custom-control custom-radio custom-control-inline">
+                              <input class="custom-control-input" type="radio" name="radio-inline"><span class="custom-control-label edit_listmodal_radio">소셜로그인소셜로그인소셜로그인소셜로그인</span>
+                            </label>
+                        </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="card card_shadow">
+                        <div class="mylist_thumb">
+                          <img class="card-img-top" src="assets/img/ex_ui3.png" alt="Placeholder">
+                        </div>
+                        <div class="form-group col-md-12 layout_padding">
+                            <label class="custom-control custom-radio custom-control-inline">
+                              <input class="custom-control-input" type="radio" name="radio-inline"><span class="custom-control-label edit_listmodal_radio">소셜로그인소셜로그인소셜로그인소셜로그인</span>
+                            </label>
+                        </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="card card_shadow">
+                        <div class="mylist_thumb">
+                          <img class="card-img-top" src="assets/img/ex_ui1.png" alt="Placeholder">
+                        </div>
+                        <div class="form-group col-md-12 layout_padding">
+                            <label class="custom-control custom-radio custom-control-inline">
+                              <input class="custom-control-input" type="radio" name="radio-inline"><span class="custom-control-label edit_listmodal_radio">소셜로그인소셜로그인소셜로그인소셜로그인</span>
+                            </label>
+                        </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="card card_shadow">
+                        <div class="mylist_thumb">
+                          <img class="card-img-top" src="assets/img/ex_ui3.png" alt="Placeholder">
+                        </div>
+                        <div class="form-group col-md-12 layout_padding">
+                            <label class="custom-control custom-radio custom-control-inline">
+                              <input class="custom-control-input" type="radio" name="radio-inline"><span class="custom-control-label edit_listmodal_radio">소셜로그인소셜로그인소셜로그인소셜로그인</span>
+                            </label>
+                        </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="card card_shadow">
+                        <div class="mylist_thumb">
+                          <img class="card-img-top" src="assets/img/ex_ui5.png" alt="Placeholder">
+                        </div>
+                        <div class="form-group col-md-12 layout_padding">
+                            <label class="custom-control custom-radio custom-control-inline">
+                              <input class="custom-control-input" type="radio" name="radio-inline"><span class="custom-control-label edit_listmodal_radio">소셜로그인소셜로그인소셜로그인소셜로그인</span>
+                            </label>
+                        </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="card card_shadow">
+                        <div class="mylist_thumb">
+                          <img class="card-img-top" src="assets/img/ex_ui5.png" alt="Placeholder">
+                        </div>
+                        <div class="form-group col-md-12 layout_padding">
+                            <label class="custom-control custom-radio custom-control-inline">
+                              <input class="custom-control-input" type="radio" name="radio-inline"><span class="custom-control-label edit_listmodal_radio">소셜로그인소셜로그인소셜로그인소셜로그인</span>
+                            </label>
+                        </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="card card_shadow">
+                        <div class="mylist_thumb">
+                          <img class="card-img-top" src="assets/img/ex_ui5.png" alt="Placeholder">
+                        </div>
+                        <div class="form-group col-md-12 layout_padding">
+                            <label class="custom-control custom-radio custom-control-inline">
+                              <input class="custom-control-input" type="radio" name="radio-inline"><span class="custom-control-label edit_listmodal_radio">소셜로그인소셜로그인소셜로그인소셜로그인</span>
+                            </label>
+                        </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="card card_shadow">
+                        <div class="mylist_thumb">
+                          <img class="card-img-top" src="assets/img/ex_ui5.png" alt="Placeholder">
+                        </div>
+                        <div class="form-group col-md-12 layout_padding">
+                            <label class="custom-control custom-radio custom-control-inline">
+                              <input class="custom-control-input" type="radio" name="radio-inline"><span class="custom-control-label edit_listmodal_radio">소셜로그인소셜로그인소셜로그인소셜로그인</span>
+                            </label>
+                        </div>
+                        </div>
+                      </div>
+                     </div>
+                    </div>
+               <!--내컴퓨터 썸네일 등록 모달 파트-->
+                    <div class="col-md-12 tab-pane" id="error1" role="tabpanel">
+                      <div class="form-group">
+                        <label>썸네일 이미지 첨부</label>
+                        <div class="input-group mb-3">
+                          <div class="custom-file">
+                            <input class="custom-file-input" id="inputGroupFile02" type="file">
+                            <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+               <!--/내컴퓨터 썸네일 등록 모달 파트-->
+                 </div>
+                </div>
+              </div>
+            </div>
+              <div class="modal-footer">
+                <button class="btn btn-secondary md-close" type="button" data-dismiss="modal">취소</button>
+                <button class="btn btn-primary md-close" type="button" data-dismiss="modal">적용</button>
+              </div>
+            </div>
+            </div>
+            <div class="modal-overlay"></div>
+        <!--/레이아웃ui등록 모달-->
+        <div class="main-content container-fluid main_content_img">
+              <button class="btn btn-space md-trigger btn-outline-primary btn-space" data-modal="nft-layout"><i class="icon icon-left mdi mdi-image"></i>레이아웃 등록</button>
+        </div>
+      </div>
+      <nav class="be-right-sidebar">
+        <div class="sb-content">
+          <div class="tab-navigation">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li class="nav-item" role="presentation"><a class="nav-link active" href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Chat</a></li>
+              <li class="nav-item" role="presentation"><a class="nav-link" href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">Todo</a></li>
+              <li class="nav-item" role="presentation"><a class="nav-link" href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">Settings</a></li>
+            </ul>
+          </div>
+          <div class="tab-panel">
+            <div class="tab-content">
+              <div class="tab-pane tab-chat active" id="tab1" role="tabpanel">
+                <div class="chat-contacts">
+                  <div class="chat-sections">
+                    <div class="be-scroller-chat">
+                      <div class="content">
+                     
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bottom-input">
+                    <p class="mt-2 mb-2">
+                      <button class="md-trigger btn btn-space btn-outline-primary btn-space" data-modal="nft-mylist"><i class="icon icon-left mdi mdi-label-heart"></i>관심목록에서 추가</button>
+                      <button class="btn btn-space md-trigger btn-outline-primary btn-space" data-modal="nft-custom"><i class="icon icon-left mdi mdi-edit"></i>직접입력으로 추가</button>
+                    </p>
+                  </div>
+                </div>
+                <div class="chat-window">
+                  <div class="title">
+                    <div class="user"><img src="assets/img/avatar2.png" alt="Avatar">
+                      <h2>Maggie jackson</h2><span>Active 1h ago</span>
+                    </div><span class="icon return mdi mdi-chevron-left"></span>
+                  </div>
+                  <div class="chat-messages">
+                    <div class="be-scroller-messages">
+                      <div class="content">
+                        <ul>
+                          <li class="friend">
+                            <div class="msg">Hello</div>
+                          </li>
+                          <li class="self">
+                            <div class="msg">Hi, how are you?</div>
+                          </li>
+                          <li class="friend">
+                            <div class="msg">Good, I'll need support with my pc</div>
+                          </li>
+                          <li class="self">
+                            <div class="msg">Sure, just tell me what is going on with your computer?</div>
+                          </li>
+                          <li class="friend">
+                            <div class="msg">I don't know it just turns off suddenly</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chat-input">
+                    <div class="input-wrapper"><span class="photo mdi mdi-camera"></span>
+                      <input type="text" placeholder="Message..." name="q" autocomplete="off"><span class="send-msg mdi mdi-mail-send"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane tab-todo" id="tab2" role="tabpanel">
+                <div class="todo-container">
+                  <div class="todo-wrapper">
+                    <div class="be-scroller-todo">
+                      <div class="todo-content"><span class="category-title">Today</span>
+                        <ul class="todo-list">
+                          <li>
+                            <div class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                              <input class="custom-control-input" type="checkbox" checked="" id="tck1">
+                              <label class="custom-control-label" for="tck1">Initialize the project</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                              <input class="custom-control-input" type="checkbox" id="tck2">
+                              <label class="custom-control-label" for="tck2">Create the main structure							</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                              <input class="custom-control-input" type="checkbox" id="tck3">
+                              <label class="custom-control-label" for="tck3">Updates changes to GitHub							</label>
+                            </div>
+                          </li>
+                        </ul><span class="category-title">Tomorrow</span>
+                        <ul class="todo-list">
+                          <li>
+                            <div class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                              <input class="custom-control-input" type="checkbox" id="tck4">
+                              <label class="custom-control-label" for="tck4">Initialize the project							</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                              <input class="custom-control-input" type="checkbox" id="tck5">
+                              <label class="custom-control-label" for="tck5">Create the main structure							</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                              <input class="custom-control-input" type="checkbox" id="tck6">
+                              <label class="custom-control-label" for="tck6">Updates changes to GitHub							</label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                              <input class="custom-control-input" type="checkbox" id="tck7">
+                              <label class="custom-control-label" for="tck7" title="This task is too long to be displayed in a normal space!">This task is too long to be displayed in a normal space!							</label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bottom-input">
+                    <input type="text" placeholder="Create new task..." name="q"><span class="mdi mdi-plus"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane tab-settings" id="tab3" role="tabpanel">
+                <div class="settings-wrapper">
+                  <div class="be-scroller-settings"><span class="category-title">General</span>
+                    <ul class="settings-list">
+                      <li>
+                        <div class="switch-button switch-button-sm">
+                          <input type="checkbox" checked="" name="st1" id="st1"><span>
+                            <label for="st1"></label></span>
+                        </div><span class="name">Available</span>
+                      </li>
+                      <li>
+                        <div class="switch-button switch-button-sm">
+                          <input type="checkbox" checked="" name="st2" id="st2"><span>
+                            <label for="st2"></label></span>
+                        </div><span class="name">Enable notifications</span>
+                      </li>
+                      <li>
+                        <div class="switch-button switch-button-sm">
+                          <input type="checkbox" checked="" name="st3" id="st3"><span>
+                            <label for="st3"></label></span>
+                        </div><span class="name">Login with Facebook</span>
+                      </li>
+                    </ul><span class="category-title">Notifications</span>
+                    <ul class="settings-list">
+                      <li>
+                        <div class="switch-button switch-button-sm">
+                          <input type="checkbox" name="st4" id="st4"><span>
+                            <label for="st4"></label></span>
+                        </div><span class="name">Email notifications</span>
+                      </li>
+                      <li>
+                        <div class="switch-button switch-button-sm">
+                          <input type="checkbox" checked="" name="st5" id="st5"><span>
+                            <label for="st5"></label></span>
+                        </div><span class="name">Project updates</span>
+                      </li>
+                      <li>
+                        <div class="switch-button switch-button-sm">
+                          <input type="checkbox" checked="" name="st6" id="st6"><span>
+                            <label for="st6"></label></span>
+                        </div><span class="name">New comments</span>
+                      </li>
+                      <li>
+                        <div class="switch-button switch-button-sm">
+                          <input type="checkbox" name="st7" id="st7"><span>
+                            <label for="st7"></label></span>
+                        </div><span class="name">Chat messages</span>
+                      </li>
+                    </ul><span class="category-title">Workflow</span>
+                    <ul class="settings-list">
+                      <li>
+                        <div class="switch-button switch-button-sm">
+                          <input type="checkbox" name="st8" id="st8"><span>
+                            <label for="st8"></label></span>
+                        </div><span class="name">Deploy on commit</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
+    <script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="assets/js/app.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery.nestable/jquery.nestable.js" type="text/javascript"></script>
+    <script src="assets/lib/moment.js/min/moment.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+    <script src="assets/lib/select2/js/select2.min.js" type="text/javascript"></script>
+    <script src="assets/lib/select2/js/select2.full.min.js" type="text/javascript"></script>
+    <script src="assets/lib/bootstrap-slider/bootstrap-slider.min.js" type="text/javascript"></script>
+    <script src="assets/lib/bs-custom-file-input/bs-custom-file-input.js" type="text/javascript"></script>
+    <script src="assets/js/app-form-elements.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery.niftymodals/js/jquery.niftymodals.js" type="text/javascript"></script>
+    <script src="assets/js/app-form-wysiwyg.js" type="text/javascript"></script>
+    <script src="assets/lib/summernote/summernote-ext-beagle.js" type="text/javascript"></script>
+    <script src="assets/lib/summernote/summernote-bs4.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+      $.fn.niftyModal('setDefaults',{
+      	overlaySelector: '.modal-overlay',
+      	contentSelector: '.modal-content',
+      	closeSelector: '.modal-close',
+      	classAddAfterOpen: 'modal-show'
+      });
+
+      $(document).ready(function(){
+      	//-initialize the javascript
+      	App.init();
+        App.formElements();
+      	App.textEditors();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>portfolio</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/theme.css">
+	<link rel="stylesheet" href="css/custom.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!-- End Required meta tags -->
+    <link rel="shortcut icon" href="img/lsj.png">
+</head>
+
+<body>
+<head>
+ <h2>Portfolio</h2>
+</head>
+<main>
+ <section class="mb-5">
+ <ul class="gallery">
+ <h3 class="text-left m-3">퍼블리싱</h3>
+  <li>
+   <a href="http://www.hygino.co.kr/">
+	<img src="img/hygino.png">
+	<p>반응형 홈페이지 제작</p>
+   </a>
+  </li>
+  <li>
+	<a href="mes/webapp/resources/index.html">
+	   <img src="img/mes.png">
+	   <p>MES</p>
+   </a>
+ </li>
+ <li>
+   <a href="dev/index.html">
+	  <img src="img/dev.png">
+	  <p>린캔버스 2nd 프로젝트</p>
+  </a>
+</li>
+  <li>
+	 <a href="maxim/index.html">
+		<img src="img/w_logo1.png">
+		<p>반응형 홈페이지 제작(개인 프로젝트)</p>
+	</a>
+  </li>
+  <li>
+	 <a href="lush/index.html">
+		<img src="img/w_logo2.png">
+		<p>랜딩페이지 제작(개인 프로젝트)</p>
+	</a>
+  </li>
+
+  <li>
+	 <a href="lexus/index.html">
+		<img src="img/w_logo3.png">
+		<p>홈페이지 제작 연습</p>
+	</a>
+  </li>
+  <li>
+	 <a href="mirae/index.html">
+		<img src="img/w_logo5.png">
+		<p>웹 어플 연습</p>
+	</a>
+  </li>
+
+  <li>
+	 <a href="hollys/index.html">
+		<img src="img/w_logo8.png">
+		<p>홈페이지 제작 연습</p>
+	</a>
+  </li>
+
+ </ul> 
+</section>
+<section>
+ <ul class="gallery">
+ <h3 class="text-left m-3">디자인</h3>
+ <li>
+	   <a href="make/sub.html">
+		  <img src="img/make.png">
+		  <p>헬스케어 어플 UI 디자인</p>
+	  </a>
+  </li>
+  <li>
+		<a href="with/sub.html">
+		   <img src="img/with.png">
+		   <p>샵인샵 어플 UI 디자인</p>
+	   </a>
+   </li>
+   <li>
+		 <a href="mago/sub.html">
+			<img src="img/mago.png">
+			<p>마사지샵 어플 UI 디자인</p>
+		</a>
+	</li>
+	<li>
+		  <a href="cube/sub.html">
+			 <img src="img/cube.png">
+			 <p>스마트팜 어플 UI 디자인</p>
+		 </a>
+	 </li>
+  <li>
+	 <a href="eastar/index.html">
+		<img src="img/w_logo6.png">
+		<p>상세페이지 디자인</p>
+	</a>
+  </li> 
+  
+ </ul>
+</section>
+</main>
+
+<script>
+ $(function(){
+	 $(".gallery li").each(function(n) {
+		a = Math.ceil(Math.random()*10)  //ceil 은 소수점 올림, 1~10 난수발생
+		 
+		 $(".gallery li").eq(n).delay(100*a).animate({opacity:1})
+    }); 
+	 })
+</script>
+
+</body>
+</html>
+</script>
+
+</body>
+</html>

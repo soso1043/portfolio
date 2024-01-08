@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  	
+<mapper namespace="mes.mappers.bm.dealCorpAdmMapper">
+
+	<resultMap id="DealCorpAdmVo" type="mes.domain.bm.DealCorpAdmVo">
+		<result property="dealCorpCd"			column="DEAL_CORP_CD"			/>
+		<result property="dealCorpNm"			column="DEAL_CORP_NM"			/>
+		<result property="initial"				column="INITIAL"				/>
+		<result property="presidentNm"			column="PRESIDENT_NM"			/>
+		<result property="country"				column="COUNTRY"				/>
+		<result property="corpNo"				column="CORP_NO"				/>
+		<result property="registNo"				column="REGIST_NO"				/>
+		<result property="bizCond"				column="BIZ_COND"				/>
+		<result property="bizType"				column="BIZ_TYPE"				/>
+		<result property="addrNo"				column="ADDR_NO"				/>				
+		<result property="addrBase"				column="ADDR_BASE"				/>
+		<result property="addrDtl"				column="ADDR_DTL"				/>
+		<result property="telNo"				column="TEL_NO"					/>		
+		<result property="faxNo"				column="FAX_NO"					/>
+		<result property="emailAddr"			column="EMAIL_ADDR"				/>		
+		<result property="tax"					column="TAX"					/>
+		<result property="officeChrger"			column="OFFICE_CHRGER"			/>		
+		<result property="bizChrger"			column="BIZ_CHRGER"				/>		
+		<result property="dealGubun"			column="DEAL_GUBUN"				/>
+		<result property="dealCorpDesc"			column="DEAL_CORP_DESC"			/>
+		<result property="useYnCd"				column="USE_YN_CD"				/>					
+		<result property="regId"				column="REG_ID"					/>
+		<result property="regDate"				column="REG_DATE"				/>
+		<result property="updId"				column="UPD_ID"					/>
+		<result property="updDate"				column="UPD_DATE"				/>
+	</resultMap>
+	
+	
+	<!-- 시스템공통그룹 전체조회 -->
+	<select id="listAll" resultMap="DealCorpAdmVo">
+		<![CDATA[
+			SELECT
+			    DEAL_CORP_CD
+				,DEAL_CORP_NM
+				,INITIAL
+				,PRESIDENT_NM
+				,COUNTRY
+				,CORP_NO
+				,REGIST_NO
+				,BIZ_COND
+				,BIZ_TYPE
+				,ADDR_NO
+				,ADDR_BASE
+				,ADDR_DTL
+				,TEL_NO
+				,FAX_NO
+				,EMAIL_ADDR
+				,TAX
+				,OFFICE_CHRGER
+				,BIZ_CHRGER
+				,DEAL_GUBUN
+				,USE_YN_CD
+				,DEAL_CORP_DESC
+				,REG_ID
+				,REG_DATE
+				,UPD_ID
+				,UPD_DATE
+			FROM TB_DEAL_CORP_ADM 
+		]]>
+	</select>
+	
+	
+	<select id="read" resultMap="DealCorpAdmVo">
+		<![CDATA[
+			SELECT
+			    DEAL_CORP_CD
+				,DEAL_CORP_NM
+				,INITIAL
+				,PRESIDENT_NM
+				,COUNTRY
+				,CORP_NO
+				,REGIST_NO
+				,BIZ_COND
+				,BIZ_TYPE
+				,ADDR_NO
+				,ADDR_BASE
+				,ADDR_DTL
+				,TEL_NO
+				,FAX_NO
+				,EMAIL_ADDR
+				,TAX
+				,OFFICE_CHRGER
+				,BIZ_CHRGER
+				,DEAL_GUBUN
+				,USE_YN_CD
+				,DEAL_CORP_DESC
+				,REG_ID
+				,REG_DATE
+				,UPD_ID
+				,UPD_DATE
+			FROM TB_DEAL_CORP_ADM 
+			WHERE DEAL_CORP_CD = #{dealCorpCd}
+		]]>
+	</select>
+
+	<select id="selectDealCorpSeqCd" resultType="String">
+		SELECT ISNULL(RIGHT('00000' + CAST(MAX(DEAL_CORP_CD)+1 AS NVARCHAR),5), '00001') FROM TB_DEAL_CORP_ADM
+	</select>	
+	
+	<insert id="create" parameterType="mes.domain.bm.DealCorpAdmVo">
+		<![CDATA[
+			INSERT INTO TB_DEAL_CORP_ADM(
+				DEAL_CORP_CD
+				,DEAL_CORP_NM
+				,INITIAL
+				,PRESIDENT_NM
+				,COUNTRY
+				,CORP_NO
+				,REGIST_NO
+				,BIZ_COND
+				,BIZ_TYPE
+				,ADDR_NO
+				,ADDR_BASE
+				,ADDR_DTL
+				,TEL_NO
+				,FAX_NO
+				,EMAIL_ADDR
+				,TAX
+				,OFFICE_CHRGER
+				,BIZ_CHRGER
+				,DEAL_GUBUN
+				,USE_YN_CD
+				,DEAL_CORP_DESC
+				,REG_ID
+				,REG_DATE
+			) VALUES (
+				#{dealCorpCd}
+				,#{dealCorpNm}
+				,#{initial}
+				,#{presidentNm}
+				,#{country}
+				,#{corpNo}
+				,#{registNo}
+				,#{bizCond}
+				,#{bizType}
+				,#{addrNo}
+				,#{addrBase}
+				,#{addrDtl}
+				,#{telNo}
+				,#{faxNo}
+				,#{emailAddr}
+				,#{tax}
+				,#{officeChrger}
+				,#{bizChrger}
+				,#{dealGubun}
+				,#{useYnCd}
+				,#{dealCorpDesc}
+				,#{regId}
+				,getDate()
+			)
+		]]>
+	</insert>
+	
+	<update id="update" parameterType="mes.domain.bm.GoodsCodeAdmVo">
+		<![CDATA[
+			UPDATE	TB_DEAL_CORP_ADM 
+			SET	DEAL_CORP_NM = #{dealCorpNm}
+				,INITIAL = #{initial}
+				,PRESIDENT_NM = #{presidentNm}
+				,COUNTRY = #{country}
+				,CORP_NO = #{corpNo}
+				,REGIST_NO = #{registNo}
+				,BIZ_COND = #{bizCond}
+				,BIZ_TYPE = #{bizType}
+				,ADDR_NO = #{addrNo}
+				,ADDR_BASE = #{addrBase}
+				,ADDR_DTL = #{addrDtl}
+				,TEL_NO = #{telNo}
+				,FAX_NO = #{faxNo}
+				,EMAIL_ADDR = #{emailAddr}
+				,TAX = #{tax}
+				,OFFICE_CHRGER = #{officeChrger}
+				,BIZ_CHRGER = #{bizChrger}
+				,DEAL_GUBUN = #{dealGubun}
+				,USE_YN_CD = #{useYnCd}
+				,DEAL_CORP_DESC = #{dealCorpDesc}
+				,UPD_ID = #{updId}
+				,UPD_DATE = getDate()
+			WHERE	DEAL_CORP_CD = #{dealCorpCd}
+		]]>
+	</update>
+	
+</mapper>

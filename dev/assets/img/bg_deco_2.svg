@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="125px" height="124px" viewBox="0 0 125 124" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>bg_deco_2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="devrecipe_1" transform="translate(-456.000000, -160.000000)">
+            <g id="bg_deco_2" transform="translate(452.000000, 156.000000)">
+                <path d="M47,121.5 C47,125.089486 44.0899781,128 40.499683,128 C36.9100219,128 34,125.089486 34,121.5 C34,117.910514 36.9100219,115 40.499683,115 C44.0899781,115 47,117.910514 47,121.5" id="Fill-1" fill="#FEA766"></path>
+                <path d="M129,45.5 C129,51.8510264 123.851026,57 117.5,57 C111.148974,57 106,51.8510264 106,45.5 C106,39.1489736 111.148974,34 117.5,34 C123.851026,34 129,39.1489736 129,45.5" id="Fill-3" fill="#F5B9A6"></path>
+                <polygon id="Fill-10" fill="#76AAEC" transform="translate(17.525000, 17.525000) rotate(25.000000) translate(-17.525000, -17.525000) " points="30.05 13.255 21.795 13.255 21.795 5 13.255 5 13.255 13.255 5 13.255 5 21.795 13.255 21.795 13.255 30.05 21.795 30.05 21.795 21.795 30.05 21.795"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

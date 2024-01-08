@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1427px" height="979px" viewBox="0 0 1427 979" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>bg_deco_4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="39.7451138%" cy="-7.2628781%" fx="39.7451138%" fy="-7.2628781%" r="97.1663095%" gradientTransform="translate(0.397451,-0.072629),scale(0.876063,1.000000),rotate(53.080794),translate(-0.397451,0.072629)" id="radialGradient-1">
+            <stop stop-color="#29558C" offset="0%"></stop>
+            <stop stop-color="#B4D2F5" offset="66.6672986%"></stop>
+            <stop stop-color="#BFD8F6" offset="71.4977656%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="41.4826279%" cy="-4.62318476%" fx="41.4826279%" fy="-4.62318476%" r="98.7495164%" gradientTransform="translate(0.414826,-0.046232),scale(0.769552,1.000000),rotate(49.458414),translate(-0.414826,0.046232)" id="radialGradient-2">
+            <stop stop-color="#1E77E1" offset="0%"></stop>
+            <stop stop-color="#B4D2F5" offset="66.6672986%"></stop>
+            <stop stop-color="#BFD8F6" offset="71.4977656%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="devrecipe_1-copy-3" transform="translate(-476.000000, 0.000000)">
+            <g id="bg_deco_4" transform="translate(476.000000, 0.000000)">
+                <polygon id="Rectangle-3" fill="url(#radialGradient-1)" opacity="0.214956975" points="644.586809 0 1117.5 0 535.933236 908.766854 0 979"></polygon>
+                <polygon id="Rectangle-3" fill="url(#radialGradient-2)" opacity="0.206012228" points="960.086809 6.40112963e-15 1196.5 6.40112963e-15 1213 6.40112963e-15 1427 0 1213.00071 342.390144 1003.93324 667.766854 468 738"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

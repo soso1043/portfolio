@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  	
+<mapper namespace="mes.mappers.bm.systemCommonCodeMapper">
+
+	<resultMap id="SystemCommonCodeVo" type="mes.domain.bm.SystemCommonCodeVo">
+		<result property="baseCd"			column="BASE_CD"		/>
+		<result property="baseCdNm"			column="BASE_CD_NM"		/>
+		<result property="baseCdAbbr"		column="BASE_CD_ABBR"	/>
+		<result property="baseGroupCd"		column="BASE_GROUP_CD"	/>
+		<result property="baseCdDesc"		column="BASE_CD_DESC"	/>
+		<result property="etc1"				column="ETC1"			/>
+		<result property="etc2"				column="ETC2"			/>
+		<result property="etc3"				column="ETC3"			/>
+		<result property="etc4"				column="ETC4"			/>
+		<result property="etc5"				column="ETC5"			/>
+		<result property="etc6"				column="ETC6"			/>
+		<result property="etc7"				column="ETC7"			/>
+		<result property="etc8"				column="ETC8"			/>
+		<result property="etc9"				column="ETC9"			/>
+		<result property="etc10"			column="ETC10"			/>
+		<result property="useYn"			column="USE_YN"			/>
+		<result property="regId"			column="REG_ID"			/>
+		<result property="regDate"			column="REG_DATE"		/>
+		<result property="updId"			column="UPD_ID"			/>
+		<result property="updDate"			column="UPD_DATE"		/>
+	</resultMap>
+	
+	<select id="listAll" resultMap="SystemCommonCodeVo">
+		<![CDATA[
+			select BASE_CD, BASE_CD_NM, BASE_CD_ABBR, BASE_GROUP_CD, BASE_CD_DESC, ETC1, ETC2, ETC3, ETC4, ETC5, ETC6, ETC7, ETC8,	ETC9, ETC10, USE_YN, REG_ID, REG_DATE, UPD_ID, UPD_DATE
+			from TB_SYSTEM_COMMON_CODE
+			where BASE_GROUP_CD = #{baseGroupCd}
+			order by BASE_GROUP_CD asc, BASE_CD asc
+		]]>
+	</select>
+	
+	
+	<select id="read" resultMap="SystemCommonCodeVo">
+		<![CDATA[
+		select	BASE_CD, BASE_CD_NM, BASE_CD_ABBR, BASE_GROUP_CD, BASE_CD_DESC, ETC1, ETC2, ETC3, ETC4, ETC5, ETC6, ETC7, ETC8, ETC9, ETC10, USE_YN, REG_ID, REG_DATE, UPD_ID, UPD_DATE
+		from	TB_SYSTEM_COMMON_CODE
+		where BASE_GROUP_CD=#{baseGroupCd}
+		and BASE_CD=#{baseCd}
+		]]>
+	</select>
+
+	<insert id="create" parameterType="mes.domain.bm.SystemCommonCodeVo">
+		<![CDATA[
+			insert into TB_SYSTEM_COMMON_CODE
+				( BASE_CD, BASE_CD_NM, BASE_CD_ABBR, BASE_GROUP_CD, BASE_CD_DESC, ETC1, ETC2, ETC3, ETC4, ETC5, ETC6, ETC7, ETC8, ETC9, ETC10, USE_YN, REG_ID, REG_DATE ) 
+			values
+				( #{baseCd}, #{baseCdNm}, #{baseCdAbbr}, #{baseGroupCd}, #{baseCdDesc}, #{etc1}, #{etc2}, #{etc3}, #{etc4}, #{etc5}, #{etc6}, #{etc7}, #{etc8}, #{etc9}, #{etc10}, #{useYn}, #{regId}, getdate() )
+		]]>
+	</insert>
+
+	<update id="update">
+		<![CDATA[
+		update	TB_SYSTEM_COMMON_CODE
+		set
+			BASE_CD_NM = #{baseCdNm},
+			BASE_CD_ABBR = #{baseCdAbbr},
+			BASE_CD_DESC = #{baseCdDesc},
+			ETC1 = #{etc1},
+			ETC2 = #{etc2},
+			ETC3 = #{etc3},
+			ETC4 = #{etc4},
+			ETC5 = #{etc5},
+			ETC6 = #{etc6},
+			ETC7 = #{etc7},
+			ETC8 = #{etc8},
+			ETC9 = #{etc9},
+			ETC10 = #{etc10},
+			USE_YN = #{useYn},
+			UPD_ID = #{updId},
+			UPD_DATE = getdate()
+		where
+			BASE_CD = #{baseCd}
+		and	
+			BASE_GROUP_CD = #{baseGroupCd}
+		]]>
+	</update>
+	
+</mapper>
