@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+  <meta name="keywords" content="커핀그루나루,zjvlsrmfnskfn,커핀,그루나루">
+  <meta name="description" content="그루나루 커피">
+	<title>Document</title>
+  <link rel="icon" href="images/favicon.ico" type="images/x-icon">
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		body{font-family: '함초롬바탕'; font-size: 13px; color: #474747;}
+		#header{width: 1900px; height: 140px; background-color: #f4f4e5; margin: 0 auto;}
+		#log{background-color: #f4f4e5; width: 1200px; margin: 0 auto; background-image: url(images/live2_03.png); background-position: 100px 1px;}
+    
+		#log_in{float: right;}
+		.in{float: left;list-style: none;margin: 18px;}
+
+    #ask2{width: 78px; height: 97px; background-image: url(images/index_02.png); position: relative;right: 90px;}
+		#ask2{ list-style: none; font-weight: bold;}
+    #ask2 a{color: white;margin-left: 14px;}
+
+		#menu{width: 1200px; margin: 0 auto; background-color: #f4f4e5; }
+		#menu_li li{ background-color: #f4f4e5; float: right; list-style: none; margin: 0 30px;font-size: 16px;}
+
+	  
+    #bt{width: 1900px; margin: 0 auto; height: 200px; background-color: #f4f4e5; text-align: center; overflow: hidden;}
+    #bt #footer{width: 1200px; margin:0 auto; padding-top: 10px; box-sizing: border-box;}
+    #footer li{list-style: none;}
+    #bt_1{float: left; width: 180px; }
+    #bt_2{float: left; width: 750px; }
+    #li_1{margin-top: 10px;}
+    #li_1 li{margin: 10px; font-size: 14px; font-weight: bold;}
+    #li_2{margin-top: 40px; margin:}
+    #li_2 li{margin: 30px;}
+    #bt_3{float: left; margin-top: 120px;}
+    #li_3 li{margin-left: 20px; float: left;}
+
+    #name{width: 1200px; margin: 0 auto; font-weight: bold; font-size: 25px;}
+    #name p{position: relative; margin-left: 20px; margin-top: 20px;}
+    #chart{width: 1200px; margin: 0 auto; border: 1px solid #acacac; height: 245px; margin-top: 20px;}
+    #chart p{position: absolute; margin-left: 70px; margin-top: 40px; font-size: 20px; border-bottom: 2px solid #acacac; width: 1000px; height: 40px; font-weight: bold;}
+
+
+    #check{width: 1200px; margin: 0 auto; margin-top: 70px; margin-left: 50px;}
+    #check li{float: left; list-style: none; margin-top: 45px; margin-right: 50px;}
+    #check input{ width: 50px;}
+
+    #espre{margin: 0 auto; width: 1200px; height: 65px; background-color: rgba(196,145,199,0.4); margin-top: 40px; font-size: 20px; font-weight: bold; background-image: url(images/live2_10.png); background-repeat: no-repeat; background-position: 860px ; }
+    #espre p{position: absolute; margin-left: 70px; margin-top: 15px;}
+
+
+    .m1{width: 1200px; margin: 0 auto; overflow: hidden;}
+    .m1 li{float: left; list-style: none; margin: 0 50px; margin-bottom: 60px; margin-top: 20px;}
+    .m1 li:nth-child(2){position: absolute; margin-top: 230px; margin-left: 110px;}
+    .m1 li:nth-child(4){position: absolute; margin-top: 230px; margin-left: 380px;}
+    .m1 li:nth-child(6){position: absolute; margin-top: 230px; margin-left: 680px;}
+    .m1 li:nth-child(8){position: absolute; margin-top: 230px; margin-left: 1025px;}
+    
+
+    .m2 p{position: absolute; margin-left: 190px; margin-top: 5px;}
+    #ico{position: absolute; margin-left: 1090px; margin-top: 5px;}
+    .m2{width: 1200px; margin: 0 auto; overflow: hidden; background-color: #ede6dd; background-image: url(images/live2_08.png);}
+    .m2 li{float: left; list-style: none; margin: 0 50px; margin-bottom: 60px; margin-top: 20px;}
+    .m2 li:nth-child(2){position: absolute; margin-top: 230px; margin-left: 97px;}
+    .m2 li:nth-child(4){position: absolute; margin-top: 230px; margin-left: 420px;}
+    .m2 li:nth-child(6){position: absolute; margin-top: 230px; margin-left: 723px;}
+    .m2 li:nth-child(8){position: absolute; margin-top: 230px; margin-left: 1000px;}
+
+    .m3 p{position: absolute; margin-left: 190px; margin-top: 5px;}
+    .m3{width: 1200px; margin: 0 auto; overflow: hidden;}
+    .m3 li{float: left; list-style: none; margin: 0 50px; margin-bottom: 60px; margin-top: 20px;}
+    .m3 li:nth-child(2){position: absolute; margin-top: 230px; margin-left: 110px;}
+    .m3 li:nth-child(4){position: absolute; margin-top: 230px; margin-left: 422px;}
+    .m3 li:nth-child(6){position: absolute; margin-top: 230px; margin-left: 705px;}
+    .m3 li:nth-child(8){position: absolute; margin-top: 230px; margin-left: 1000px;}
+
+    .m4{width: 1200px; margin: 0 auto; overflow: hidden; background-color: #ede6dd; background-image: url(images/live2_08.png); background-repeat: no-repeat; background-position: 10px 0px; margin-bottom: 50px;}
+    .m4 li{float: left; list-style: none; margin: 0 50px; margin-bottom: 60px; margin-top: 20px;}
+    .m4 li:nth-child(2){position: absolute; margin-top: 230px; margin-left: 97px;}
+    .m4 li:nth-child(4){position: absolute; margin-top: 230px; margin-left: 420px;}
+    .m4 li:nth-child(6){position: absolute; margin-top: 230px; margin-left: 723px;}
+    .m4 li:nth-child(8){position: absolute; margin-top: 230px; margin-left: 1000px;}
+
+
+ 
+  
+
+    a{color: #474747; text-decoration: none; }
+    a:hover{color: black; text-decoration: underline;}
+
+	</style>
+</head>
+<body>
+	<div id="header">
+		<div id="log">
+		 <a href="index.html"><img src="images/logo.png" alt="커핀그루나루로고"></a>
+		 		 
+		 <ul id="log_in">
+			<li class="in"><a href="login"> 로그인</a></li>
+			<li class="in"><a href="sign">회원가입</a></li>
+			<li id="ask2"><a href="ask3">가맹문의</a></li>
+		 </ul>
+		</div>
+
+   <div id="menu">
+        <ul id="menu_li">
+      		<li><a href="story">COFFINE STORY </a></li>
+      		<li><a href="comu">COMMUNITY</a></li>
+      		<li><a href="mem">MEMBERSHIP</a></li>
+      		<li><a href="eve">EVENT</a></li>
+        	<li><a href="store">STORE</a></li>
+      		<li><a href="menu2">MENU</a></li>
+        </ul>       	
+    </div>
+ </div>
+
+
+ <div id="name">
+      <P>MENU</P>
+    </div>
+
+    <div id="chart">
+     <p>분류보기</p>
+     <form>
+       <ul id="check">
+          <li><input type="checkbox" id="total" name="divide"><label for="total">전체상품보기</label></li>
+          <li><input type="checkbox" id="ess" name="divide"><label for="ess">에스프레소</label></li>
+          <li><input type="checkbox" id="blen" name="divide"><label for="blen">블랜디드</label></li>
+          <li><input type="checkbox" id="smothi" name="divide"><label for="smothi">스무디</label></li>
+          <li><input type="checkbox" id="non" name="divide"><label for="non">Non에스프레소음료</label></li>
+          <li><input type="checkbox" id="tea" name="divide"><label for="tea">주스&티</label></li>
+          <li><input type="checkbox" id="win" name="divide"><label for="win">와인음료</label></li>
+          <li><input type="checkbox" id="dis" name="divide"><label for="dis">브레드&디저트</label></li>
+          <li><input type="checkbox" id="md" name="divide"><label for="md">MD</label></li>
+        </ul>
+      </form>
+    </div>
+
+    <div id="espre">
+      <p>에스프레소</p>
+    </div>
+
+
+    <div class="m1">
+      <ul id="table1">
+        <li class="t1"><img src="images/es.png" alt="에스프레소 이미지" width="200"></li>
+        <li>에스프레소</li>
+        <li class="t1"><img src="images/em.png" alt="에스프레소마끼아또이미지" width="200"></li>
+        <li>에스프레소 마끼아또</li>
+        <li class="t1"><img src="images/cina.png" alt="시나몬슈가카푸치노이미지" width="200"></li>
+        <li>시나몬 슈가 카푸치노</li>
+        <li class="t1"><img src="images/ca.png" alt="카푸치노이미지" width="200"></li>
+        <li>카푸치노</li>
+      </ul>
+    </div>
+
+    <div class="m2">
+      <div id="mm2">
+      <p><img src="images/best.png" alt="베스트아이콘" width="60"></p>
+       <div id="ico"><img src="images/best.png" alt="베스트아이콘" width="60"></div>
+      <ul id="table2">
+        <li class="t2"><img src="images/ame.png" alt="아메리카노이미지" width="200"></li>
+        <li>카페 아메리카노</li>
+        <li class="t2"><img src="images/cl.png" alt="카페이미지" width="200"></li>
+        <li>카페라떼</li>
+        <li class="t2"><img src="images/sha.png" alt="샤커레토이미지" width="200"></li>
+        <li>샤커레토</li>
+        <li class="t2"><img src="images/cm.png" alt="카라멜마끼아또이미지" width="200"></li>
+        <li>카라멜 마끼아또</li>
+      </ul>
+      </div>
+    </div>
+
+    <div class="m3">
+       <p><img src="images/best.png" alt="베스트아이콘" width="60"></p>
+      <ul id="table3">
+        <li class="t3"><img src="images/va.png" alt="바닐라라떼이미지" width="200"></li>
+        <li>바닐라 라떼</li>
+        <li class="t3"><img src="images/mo.png" alt="카페모카이미지" width="200"></li>
+        <li>카페모카</li>
+        <li class="t3"><img src="images/gre.png" alt="그린민트모카이미지" width="200"></li>
+        <li>그린민트 모카</li>
+        <li class="t3"><img src="images/wh.png" alt="화이트드림모카이미지" width="200"></li>
+        <li>화이트 드림 모카</li>
+      </ul>
+    </div>
+
+    <div class="m4">
+      <ul id="table4">
+        <li class="t4"><img src="images/camo.png" alt="스윗카라멜모카" width="200"></li>
+        <li>스윗 카라멜 모카</li>
+      </ul>
+    </div>
+
+   
+      
+   
+      
+       
+
+  <div id="bt">
+    <div id="footer">
+    <div id="bt_1">
+     <ul id="li_1">
+      <li><a href="#">마케팅제휴문의</a></li>
+      <li><a href="#">신규입점제안</a></li>
+      <li><a href="#">개인정보취급방침</a></li>
+      <li><a href="#">전체메뉴</a></li>
+      <li><a href="#">찾아오시는길</a></li>
+      <li><a href="#">이용약관</a></li>
+      </ul>
+    </div>
+
+    <div id="bt_2">
+     <ul id="li_2">
+      <li>사업자등록번호 215-87-06529 서울시 송파구백제고분로114 대표자 김은희</li>
+      <li>고객센터 02-2202-0791-2202-0807</li>
+      <li>COPYRIGHT© 2016 COFFINE GURUNARU ALL RIGHTS RESERVE</li>
+     </ul>
+    </div>
+
+    <div id="bt_3">
+      <ul id="li_3"> 
+         <li><a href="#"><img src="images/TWITTER.png" alt="트위터 아이콘" width="40"></a></li>
+         <li><a href="#"><img src="images/face.png" alt="페이스북 아이콘" width="40"></a></li>
+         <li><a href="#"><img src="images/Instagram.png" alt="인스타그램 아이콘" width="40"></a></li>
+      </ul>
+    </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
